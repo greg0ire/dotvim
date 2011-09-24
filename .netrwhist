@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/greg/.thunderbird'
-let g:netrw_dirhist_2='/home/greg/.kde/Autostart'
-let g:netrw_dirhist_3='/home/greg/public_html/wordpress'
-let g:netrw_dirhist_4='/home/greg/source/symfony/1.4/lib/plugin'
-let g:netrw_dirhist_5='/home/greg/dev/switch/projectTypes/symfony'
-let g:netrw_dirhist_6='/home/greg/dev/switch/projectTypes'
-let g:netrw_dirhist_7='projectTypes'
