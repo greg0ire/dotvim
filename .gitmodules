@@ -13,6 +13,3 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
-[submodule "nginx.vim"]
-	path = nginx.vim
-	url = https://github.com/vim-scripts/nginx.vim.git
