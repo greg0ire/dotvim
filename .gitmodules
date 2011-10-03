@@ -16,3 +16,6 @@
 [submodule "bundle/nginx.vim"]
 	path = bundle/nginx.vim
 	url = https://github.com/vim-scripts/nginx.vim.git
+[submodule "bundle/objj"]
+	path = bundle/objj
+	url = http://github.com/nanki/vim-objj
