@@ -37,6 +37,3 @@
 [submodule "bundle/argtextobj"]
 	path = bundle/argtextobj
 	url = https://github.com/vim-scripts/argtextobj.vim
-[submodule "bundle/Jinja"]
-	path = bundle/Jinja
-	url = git://github.com/vim-scripts/Jinja.git
