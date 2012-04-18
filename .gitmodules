@@ -43,3 +43,6 @@
 [submodule "bundle/dbgp-client"]
 	path = bundle/dbgp-client
 	url = https://github.com/vim-scripts/DBGp-client.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim
