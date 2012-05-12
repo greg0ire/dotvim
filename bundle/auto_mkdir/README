@@ -1,0 +1,16 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3352
+
+This plugin automatically creates parent directories for the current file if they don't exist yet.
+
+
+Example:
+    If you're currently in an empty directory, without the plugin, the command
+        :w foo/bar/baz.txt
+    will fail with with E212 ("Can't open file for writing.")
+
+    The plugin will automatically create the directories foo/ and foo/bar/ for you before Vim saves 
+    the file, so you don't have to remember to do it manually.
+
+
+Also available via git:
+    https://github.com/DataWraith/auto_mkdir

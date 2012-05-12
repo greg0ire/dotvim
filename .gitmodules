@@ -46,3 +46,9 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim
+[submodule "bundle/auto_mkdir"]
+	path = bundle/auto_mkdir
+	url = https://github.com/vim-scripts/auto_mkdir.git
+[submodule "bundle/jslint"]
+	path = bundle/jslint
+	url = https://github.com/hallettj/jslint.vim
