@@ -40,9 +40,6 @@
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = https://github.com/beyondwords/vim-twig
-[submodule "bundle/dbgp-client"]
-	path = bundle/dbgp-client
-	url = https://github.com/vim-scripts/DBGp-client.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim
