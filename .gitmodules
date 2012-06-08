@@ -55,3 +55,6 @@
 [submodule "bundle/DBGPavim"]
 	path = bundle/DBGPavim
 	url = https://github.com/brookhong/DBGPavim
+[submodule "bundle/vim-php-cs-fixer"]
+	path = bundle/vim-php-cs-fixer
+	url = git://github.com/stephpy/vim-php-cs-fixer.git
