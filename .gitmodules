@@ -91,3 +91,6 @@
 [submodule "bundle/sleuth"]
 	path = bundle/sleuth
 	url = git@github.com:tpope/vim-sleuth.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = git@github.com:tpope/vim-commentary.git
