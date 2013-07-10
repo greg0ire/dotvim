@@ -88,3 +88,6 @@
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch
+[submodule "bundle/sleuth"]
+	path = bundle/sleuth
+	url = git@github.com:tpope/vim-sleuth.git
