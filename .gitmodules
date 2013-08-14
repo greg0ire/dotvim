@@ -103,3 +103,6 @@
 [submodule "bundle/bufferline"]
 	path = bundle/bufferline
 	url = https://github.com/bling/vim-bufferline
+[submodule "bundle/php-namespace"]
+	path = bundle/php-namespace
+	url = git://github.com/arnaud-lb/vim-php-namespace.git
