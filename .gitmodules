@@ -106,3 +106,6 @@
 [submodule "bundle/php-namespace"]
 	path = bundle/php-namespace
 	url = git://github.com/arnaud-lb/vim-php-namespace.git
+[submodule "bundle/numbers"]
+	path = bundle/numbers
+	url = git@github.com:myusuf3/numbers.vim.git
