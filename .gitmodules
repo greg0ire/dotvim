@@ -106,3 +106,6 @@
 [submodule "bundle/php-namespace"]
 	path = bundle/php-namespace
 	url = git://github.com/arnaud-lb/vim-php-namespace.git
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = git@github.com:shawncplus/phpcomplete.vim.git
