@@ -1,15 +1,15 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = git://github.com/tpope/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
 [submodule "bundle/pyflakes"]
 	path = bundle/pyflakes
-	url = git://github.com/kevinw/pyflakes-vim.git
+	url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "bundle/solarized"]
 	path = bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
-	url = git://github.com/nono/vim-handlebars.git
+	url = https://github.com/nono/vim-handlebars.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
@@ -18,7 +18,7 @@
 	url = https://github.com/vim-scripts/nginx.vim.git
 [submodule "bundle/objj"]
 	path = bundle/objj
-	url = http://github.com/nanki/vim-objj
+	url = http://github.com/nanki/vim-objj.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
@@ -27,7 +27,7 @@
 	url = https://github.com/groenewege/vim-less.git
 [submodule "bundle/camelCaseMotion"]
 	path = bundle/camelCaseMotion
-	url = https://github.com/bkad/CamelCaseMotion
+	url = https://github.com/bkad/CamelCaseMotion.git
 [submodule "bundle/vim-indent-object"]
 	path = bundle/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object
@@ -57,52 +57,52 @@
 	url = https://github.com/brookhong/DBGPavim
 [submodule "bundle/vim-php-cs-fixer"]
 	path = bundle/vim-php-cs-fixer
-	url = git://github.com/stephpy/vim-php-cs-fixer.git
+	url = https://github.com/stephpy/vim-php-cs-fixer.git
 [submodule "bundle/gundo"]
 	path = bundle/gundo
-	url = https://github.com/sjl/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/surround"]
 	path = bundle/surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/vim-autoclose"]
 	path = bundle/vim-autoclose
-	url = git://github.com/Townk/vim-autoclose.git
+	url = https://github.com/Townk/vim-autoclose.git
 [submodule "bundle/gitgutter"]
 	path = bundle/gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
-	url = git@github.com:tpope/vim-repeat.git
+	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/eunuch"]
 	path = bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch
 [submodule "bundle/sleuth"]
 	path = bundle/sleuth
-	url = git@github.com:tpope/vim-sleuth.git
+	url = https://github.com/tpope/vim-sleuth.git
 [submodule "bundle/commentary"]
 	path = bundle/commentary
-	url = git@github.com:tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
-	url = git@github.com:tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/bufferline"]
 	path = bundle/bufferline
 	url = https://github.com/bling/vim-bufferline
 [submodule "bundle/php-namespace"]
 	path = bundle/php-namespace
-	url = git://github.com/arnaud-lb/vim-php-namespace.git
+	url = https://github.com/arnaud-lb/vim-php-namespace.git
 [submodule "bundle/phpcomplete"]
 	path = bundle/phpcomplete
-	url = git@github.com:shawncplus/phpcomplete.vim.git
+	url = https://github.com/shawncplus/phpcomplete.vim.git
