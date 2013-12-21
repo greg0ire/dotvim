@@ -59,6 +59,9 @@ cabbr <expr> %% expand('%:p:h')
 set incsearch
 set gdefault
 
+"remap the leader to something easier to type
+let mapleader = "ç"
+
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
 
