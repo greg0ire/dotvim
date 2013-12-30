@@ -161,7 +161,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
     augroup NoSimultaneousEdits
         autocmd!
         autocmd SwapExists * let v:swapchoice = 'o'
-        autocmd SwapExists * echomsg ErrorMsg
+        autocmd SwapExists * echohl ErrorMsg
         autocmd SwapExists * echo 'Duplicate edit session (readonly)'
         autocmd SwapExists * echohl None
         autocmd SwapExists * sleep 2
