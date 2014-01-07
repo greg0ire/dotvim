@@ -38,7 +38,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_follow_symlinks=1
-let g:ctrlp_user_command = ['.git/', 'ack -f %s']
 let g:ctrlp_extensions = ['tag']
 
 set tags+=.git/tags
