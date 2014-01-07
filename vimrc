@@ -61,6 +61,7 @@ set gdefault
 "remap the leader to something easier to type
 let mapleader = "ç"
 
+set hlsearch
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
 
