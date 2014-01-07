@@ -65,29 +65,6 @@ set hlsearch
 "clear the highlighting
 nnoremap <leader><space> :noh<cr>
 
-" This rewires n and N to do the highlighing...
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
-
-
-function! HLNext (blinktime)
-    highlight RedOnRed ctermfg=red ctermbg=red
-    let [bufnum, lnum, col, off] = getpos('.')
-    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-    echo matchlen
-    let ring_pat = (lnum > 1 ? '\%'.(lnum-1).'l\%>'.max([col-4,1]) .'v\%<'.(col+matchlen+3).'v.\|' : '')
-            \ . '\%'.lnum.'l\%>'.max([col-4,1]) .'v\%<'.col.'v.'
-            \ . '\|'
-            \ . '\%'.lnum.'l\%>'.max([col+matchlen-1,1]) .'v\%<'.(col+matchlen+3).'v.'
-            \ . '\|'
-            \ . '\%'.(lnum+1).'l\%>'.max([col-4,1]) .'v\%<'.(col+matchlen+3).'v.'
-    let ring = matchadd('RedOnRed', ring_pat, 101)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-    call matchdelete(ring)
-    redraw
-endfunction
-
 set cc=81
 
 " Vim UI {
