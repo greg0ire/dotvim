@@ -46,6 +46,9 @@ set tags+=.git/tags
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
+" syntactic coloration when using an editor from MariaDB's client
+autocmd BufRead,BufNewFile /var/tmp/sql* setf sql
+
 set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --ignore-dir\ web/bundles\ --follow\ --smart-case
 
 set keywordprg=pman
