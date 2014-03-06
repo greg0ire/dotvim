@@ -47,7 +47,8 @@ set tags+=.git/tags
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
-set grepprg=ack\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --ignore-dir\ web/bundles\ --follow\ --smart-case
+let s:ackcommand = executable('ack-grep') ? 'ack-grep' : 'ack'
+execute "set grepprg=" . s:ackcommand . escape(" --ignore-dir cache --ignore-dir .rsync_cache --ignore-dir web/bundles --follow --smart-case", ' ')
 
 set keywordprg=pman
 
