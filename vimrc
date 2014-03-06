@@ -19,6 +19,7 @@ set ttyfast
 
 " display line numbers relative to the current line
 set relativenumber
+set number " hybrid mode (requires a recent vim)
 
 " save undo history to a file
 set undofile
