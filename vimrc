@@ -48,7 +48,7 @@ autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 
 " syntactic coloration when using an editor from MariaDB's client
-autocmd BufRead,BufNewFile /var/tmp/sql* setf sql
+autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
 let s:ackcommand = executable('ack-grep') ? 'ack-grep' : 'ack'
 execute "set grepprg=" . s:ackcommand . escape(" --ignore-dir cache --ignore-dir .rsync_cache --ignore-dir web/bundles --follow --smart-case", ' ')
