@@ -109,3 +109,6 @@
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim

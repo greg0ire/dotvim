@@ -104,6 +104,8 @@ let g:php_cs_fixer_verbose = 0                  " Return the output of command i
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
+let g:neocomplete#enable_at_startup = 1
+
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
