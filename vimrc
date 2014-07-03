@@ -93,7 +93,7 @@ set cc=81
 let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
 
-let g:php_cs_fixer_path = "~/bin/php-cs-fixer.phar" " define the path to the php-cs-fixer.phar
+let g:php_cs_fixer_path = "~/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
 let g:php_cs_fixer_level = "all"                " which level ?
 let g:php_cs_fixer_config = "default"           " configuration
 let g:php_cs_fixer_php_path = "php"             " Path to PHP
