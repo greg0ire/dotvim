@@ -2,10 +2,10 @@ public function testGet${1:MemberVariable}()
 {
     $this->assertSame(
         $this->${2:systemUnderTest},
-        $this->set$1($value = ${4})
+        $this->$2->set$1($value = ${4})
     );
     $this->assertSame(
         $value,
-        $this->get$1()
+        $this->$2->get$1()
     );
 }
