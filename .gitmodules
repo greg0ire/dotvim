@@ -112,3 +112,6 @@
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/puppet"]
+	path = bundle/puppet
+	url = https://github.com/rodjek/vim-puppet.git
