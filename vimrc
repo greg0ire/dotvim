@@ -106,6 +106,8 @@ let g:gitgutter_eager = 0 " Avoid gitgutter lag
 let g:neocomplete#enable_at_startup = 1
 let g:syntastic_puppet_puppet_args = '--parser=future'
 
+let g:puppet_align_hashes = 0
+
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
