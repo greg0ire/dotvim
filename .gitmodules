@@ -118,3 +118,6 @@
 [submodule "bundle/dbext.vim"]
 	path = bundle/dbext.vim
 	url = https://github.com/vim-scripts/dbext.vim
+[submodule "bundle/easy-align"]
+	path = bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align
