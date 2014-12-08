@@ -154,7 +154,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
   " move between buffers faster
   nnoremap é :bprev <CR>
-  nnoremap è :bprev <CR>
+  nnoremap è :bnext <CR>
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
