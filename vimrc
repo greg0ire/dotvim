@@ -114,6 +114,12 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
+nmap <Leader>a <Plug>(EasyAlign)
+
 " php tags update
 noremap <Leader>tu :! .git/hooks/php/ctags/update-ctags<CR>
 
@@ -149,7 +155,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
 
   " move between buffers faster
   nnoremap é :bprev <CR>
-  nnoremap è :bprev <CR>
+  nnoremap è :bnext <CR>
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
