@@ -124,3 +124,6 @@
 [submodule "bundle/zeal"]
 	path = bundle/zeal
 	url = https://github.com/KabbAmine/zeavim.vim
+[submodule "bundle/yaml"]
+	path = bundle/yaml
+	url = https://github.com/stephpy/vim-yaml
