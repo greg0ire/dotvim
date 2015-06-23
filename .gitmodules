@@ -127,3 +127,6 @@
 [submodule "bundle/yaml"]
 	path = bundle/yaml
 	url = https://github.com/stephpy/vim-yaml
+[submodule "bundle/bundle/multiple-cursors"]
+	path = bundle/bundle/multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
