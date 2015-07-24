@@ -92,7 +92,6 @@ set cc=81
     :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 " }
 
-let g:dbgPavimPort = 9009
 let g:dbgPavimBreakAtEntry = 0
 
 let g:php_cs_fixer_path = "~/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
