@@ -23,6 +23,7 @@ set number " hybrid mode (requires a recent vim)
 
 " save undo history to a file
 set undofile
+set undodir=~/.vim/undo
 
 colorscheme solarized
 let g:solarized_termtrans=1
