@@ -1,6 +1,8 @@
 "autoload plugin
 call pathogen#infect()
 
+set noswapfile
+
 " don't try to be compatible with old specs of vi
 set nocompatible
 
