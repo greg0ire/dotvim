@@ -130,3 +130,6 @@
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/fzf"]
+	path = bundle/fzf
+	url = git@github.com:junegunn/fzf.vim.git

@@ -1,6 +1,10 @@
 "autoload plugin
 call pathogen#infect()
 
+set rtp+=~/.fzf
+
+set noswapfile
+
 " don't try to be compatible with old specs of vi
 set nocompatible
 
@@ -95,7 +99,7 @@ set cc=81
 let g:dbgPavimBreakAtEntry = 0
 
 let g:php_cs_fixer_path = "~/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
-let g:php_cs_fixer_level = "all"                " which level ?
+let g:php_cs_fixer_level = "psr2"               " which level ?
 let g:php_cs_fixer_config = "default"           " configuration
 let g:php_cs_fixer_php_path = "php"             " Path to PHP
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
@@ -150,8 +154,8 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 
-  " access CtrlP buffer list faster
-  nnoremap à :CtrlPBuffer<CR>
+  " access fzf file list faster
+  nnoremap à :FZF<CR>
 
   " move between buffers faster
   nnoremap é :bprev <CR>
