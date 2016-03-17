@@ -158,9 +158,15 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   " access fzf file list faster
   nnoremap à :FZF<CR>
 
-  " move between buffers faster
-  nnoremap é :bprev <CR>
-  nnoremap è :bnext <CR>
+  nnoremap ù :! bin/phpunit --configuration app %<CR>
+
+  " access buffers faster
+  nnoremap é :Buffers<CR>
+
+  " search for word under cursor
+  nnoremap è :grep <cword><CR>
+
+  nnoremap § :Tags<CR>
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
