@@ -60,7 +60,7 @@ autocmd BufNewFile,BufReadPost .php_cs set filetype=php
 " syntactic coloration when using an editor from MariaDB's client
 autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
-set grepprg=ag\ --ignore-dir\ cache\ --ignore-dir\ .rsync_cache\ --ignore-dir\ web/bundles\ --follow\ --smart-case
+set grepprg=ag\ --ignore\ cache\ --ignore\ .rsync_cache\ --ignore\ web/bundles\ --follow\ --smart-case
 
 set keywordprg=pman
 
