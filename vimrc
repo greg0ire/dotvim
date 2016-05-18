@@ -55,6 +55,7 @@ set tags+=.git/tags
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost .php_cs set filetype=php
 
 " syntactic coloration when using an editor from MariaDB's client
 autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
@@ -102,11 +103,12 @@ set cc=81
 let g:dbgPavimBreakAtEntry = 0
 
 let g:php_cs_fixer_path = "~/bin/php-cs-fixer"  " define the path to the php-cs-fixer.phar
-let g:php_cs_fixer_config = "default"           " configuration
 let g:php_cs_fixer_php_path = "php"             " Path to PHP
+let g:php_cs_fixer_level = 'all'                " Which part of the standard to apply
+let g:php_cs_fixer_config_file = '.php_cs'      " works only if you open vim in the root of the project
 let g:php_cs_fixer_enable_default_mapping = 1   " Enable the mapping by default (<leader>pcd)
 let g:php_cs_fixer_dry_run = 0                  " Call command with dry-run option
-let g:php_cs_fixer_verbose = 0                  " Return the output of command if 1, else an inline information.
+let g:php_cs_fixer_verbose = 1                  " Return the output of command if 1, else an inline information.
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
