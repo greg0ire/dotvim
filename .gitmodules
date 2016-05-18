@@ -133,3 +133,6 @@
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule "bundle/argwrap"]
+	path = bundle/argwrap
+	url = git@github.com:FooSoft/vim-argwrap.git
