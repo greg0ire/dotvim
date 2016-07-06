@@ -136,3 +136,6 @@
 [submodule "bundle/auto-pairs"]
 	path = bundle/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
+[submodule "bundle/greplace"]
+	path = bundle/greplace
+	url = git@github.com:skwp/greplace.vim.git
