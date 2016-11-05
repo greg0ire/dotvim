@@ -174,7 +174,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap § :Tags<CR>
 
   " argwrap
-  nnoremap <silent> <leader>a :ArgWrap<CR>
+  nnoremap <silent> <leader>q :ArgWrap<CR>
 " }
 
 "====[ Open any file with a pre-existing swapfile in readonly mode "]=========
