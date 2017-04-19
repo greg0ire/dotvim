@@ -65,7 +65,7 @@ set incsearch
 set gdefault
 
 "remap the leader to something easier to type
-let mapleader = "ç"
+let mapleader = ";"
 
 set hlsearch
 "clear the highlighting
@@ -152,18 +152,20 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 
-  " access fzf file list faster
-  nnoremap à :FZF<CR>
+  " FZF
+  nnoremap <leader>f :FZF<CR>
+  nnoremap <leader>l :FZF src<CR>
 
-  nnoremap ù :! bin/phpunit --configuration app %<CR>
+  " sf phpunit
+  nnoremap <leader>p :! bin/phpunit --configuration app %<CR>
 
   " access buffers faster
-  nnoremap é :Buffers<CR>
+  nnoremap <leader>b :Buffers<CR>
 
   " search for word under cursor
-  nnoremap è :grep <cword><CR>
+  nnoremap <leader>w :grep <cword><CR>
 
-  nnoremap § :Tags<CR>
+  nnoremap <leader>ta :Tags<CR>
 
   " argwrap
   nnoremap <silent> <leader>q :ArgWrap<CR>
