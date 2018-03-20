@@ -106,9 +106,6 @@
 [submodule "pack/greg0ire/start/easy-align"]
 	path = pack/greg0ire/start/easy-align
 	url = https://github.com/junegunn/vim-easy-align
-[submodule "pack/greg0ire/start/zeal"]
-	path = pack/greg0ire/start/zeal
-	url = https://github.com/KabbAmine/zeavim.vim
 [submodule "pack/greg0ire/start/yaml"]
 	path = pack/greg0ire/start/yaml
 	url = https://github.com/stephpy/vim-yaml
