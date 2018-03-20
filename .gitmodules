@@ -64,9 +64,6 @@
 [submodule "pack/greg0ire/start/surround"]
 	path = pack/greg0ire/start/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "pack/greg0ire/start/syntastic"]
-	path = pack/greg0ire/start/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "pack/greg0ire/start/gitgutter"]
 	path = pack/greg0ire/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
