@@ -136,3 +136,6 @@
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = git@github.com:skwp/greplace.vim.git
+[submodule "bundle/phpactor"]
+	path = bundle/phpactor
+	url = git@github.com:phpactor/phpactor.git
