@@ -94,9 +94,6 @@
 [submodule "pack/greg0ire/start/php-namespace"]
 	path = pack/greg0ire/start/php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace.git
-[submodule "pack/greg0ire/start/phpcomplete"]
-	path = pack/greg0ire/start/phpcomplete
-	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "pack/greg0ire/start/tmuxline"]
 	path = pack/greg0ire/start/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim
