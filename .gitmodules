@@ -1,141 +1,141 @@
-[submodule "bundle/fugitive"]
-	path = bundle/fugitive
+[submodule "pack/greg0ire/start/fugitive"]
+	path = pack/greg0ire/start/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/pyflakes"]
-	path = bundle/pyflakes
+[submodule "pack/greg0ire/start/pyflakes"]
+	path = pack/greg0ire/start/pyflakes
 	url = https://github.com/kevinw/pyflakes-vim.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
+[submodule "pack/greg0ire/start/solarized"]
+	path = pack/greg0ire/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "bundle/handlebars"]
-	path = bundle/handlebars
+[submodule "pack/greg0ire/start/handlebars"]
+	path = pack/greg0ire/start/handlebars
 	url = https://github.com/nono/vim-handlebars.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
+[submodule "pack/greg0ire/start/nerdtree"]
+	path = pack/greg0ire/start/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
-[submodule "bundle/nginx.vim"]
-	path = bundle/nginx.vim
+[submodule "pack/greg0ire/start/nginx.vim"]
+	path = pack/greg0ire/start/nginx.vim
 	url = https://github.com/vim-scripts/nginx.vim.git
-[submodule "bundle/objj"]
-	path = bundle/objj
+[submodule "pack/greg0ire/start/objj"]
+	path = pack/greg0ire/start/objj
 	url = http://github.com/nanki/vim-objj.git
-[submodule "bundle/vim-less"]
-	path = bundle/vim-less
+[submodule "pack/greg0ire/start/vim-less"]
+	path = pack/greg0ire/start/vim-less
 	url = https://github.com/groenewege/vim-less.git
-[submodule "bundle/camelCaseMotion"]
-	path = bundle/camelCaseMotion
+[submodule "pack/greg0ire/start/camelCaseMotion"]
+	path = pack/greg0ire/start/camelCaseMotion
 	url = https://github.com/bkad/CamelCaseMotion.git
-[submodule "bundle/vim-indent-object"]
-	path = bundle/vim-indent-object
+[submodule "pack/greg0ire/start/vim-indent-object"]
+	path = pack/greg0ire/start/vim-indent-object
 	url = https://github.com/michaeljsmith/vim-indent-object
-[submodule "bundle/matchit"]
-	path = bundle/matchit
+[submodule "pack/greg0ire/start/matchit"]
+	path = pack/greg0ire/start/matchit
 	url = https://github.com/vim-scripts/matchit.zip
-[submodule "bundle/argtextobj"]
-	path = bundle/argtextobj
+[submodule "pack/greg0ire/start/argtextobj"]
+	path = pack/greg0ire/start/argtextobj
 	url = https://github.com/vim-scripts/argtextobj.vim
-[submodule "bundle/vim-twig"]
-	path = bundle/vim-twig
+[submodule "pack/greg0ire/start/vim-twig"]
+	path = pack/greg0ire/start/vim-twig
 	url = https://github.com/beyondwords/vim-twig
-[submodule "bundle/taglist"]
-	path = bundle/taglist
+[submodule "pack/greg0ire/start/taglist"]
+	path = pack/greg0ire/start/taglist
 	url = https://github.com/vim-scripts/taglist.vim
-[submodule "bundle/auto_mkdir"]
-	path = bundle/auto_mkdir
+[submodule "pack/greg0ire/start/auto_mkdir"]
+	path = pack/greg0ire/start/auto_mkdir
 	url = https://github.com/vim-scripts/auto_mkdir.git
-[submodule "bundle/jslint"]
-	path = bundle/jslint
+[submodule "pack/greg0ire/start/jslint"]
+	path = pack/greg0ire/start/jslint
 	url = https://github.com/hallettj/jslint.vim
-[submodule "bundle/bufkill"]
-	path = bundle/bufkill
+[submodule "pack/greg0ire/start/bufkill"]
+	path = pack/greg0ire/start/bufkill
 	url = https://github.com/vim-scripts/bufkill.vim
-[submodule "bundle/DBGPavim"]
-	path = bundle/DBGPavim
+[submodule "pack/greg0ire/start/DBGPavim"]
+	path = pack/greg0ire/start/DBGPavim
 	url = https://github.com/brookhong/DBGPavim
-[submodule "bundle/vim-php-cs-fixer"]
-	path = bundle/vim-php-cs-fixer
+[submodule "pack/greg0ire/start/vim-php-cs-fixer"]
+	path = pack/greg0ire/start/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer.git
-[submodule "bundle/gundo"]
-	path = bundle/gundo
+[submodule "pack/greg0ire/start/gundo"]
+	path = pack/greg0ire/start/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
+[submodule "pack/greg0ire/start/snipmate"]
+	path = pack/greg0ire/start/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule "bundle/surround"]
-	path = bundle/surround
+[submodule "pack/greg0ire/start/surround"]
+	path = pack/greg0ire/start/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
+[submodule "pack/greg0ire/start/syntastic"]
+	path = pack/greg0ire/start/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/gitgutter"]
-	path = bundle/gitgutter
+[submodule "pack/greg0ire/start/gitgutter"]
+	path = pack/greg0ire/start/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "bundle/tabular"]
-	path = bundle/tabular
+[submodule "pack/greg0ire/start/tabular"]
+	path = pack/greg0ire/start/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "bundle/vim-repeat"]
-	path = bundle/vim-repeat
+[submodule "pack/greg0ire/start/vim-repeat"]
+	path = pack/greg0ire/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/eunuch"]
-	path = bundle/eunuch
+[submodule "pack/greg0ire/start/eunuch"]
+	path = pack/greg0ire/start/eunuch
 	url = https://github.com/tpope/vim-eunuch
-[submodule "bundle/sleuth"]
-	path = bundle/sleuth
+[submodule "pack/greg0ire/start/sleuth"]
+	path = pack/greg0ire/start/sleuth
 	url = https://github.com/tpope/vim-sleuth.git
-[submodule "bundle/commentary"]
-	path = bundle/commentary
+[submodule "pack/greg0ire/start/commentary"]
+	path = pack/greg0ire/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/airline"]
-	path = bundle/airline
+[submodule "pack/greg0ire/start/airline"]
+	path = pack/greg0ire/start/airline
 	url = https://github.com/bling/vim-airline
-[submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
+[submodule "pack/greg0ire/start/vim-unimpaired"]
+	path = pack/greg0ire/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/bufferline"]
-	path = bundle/bufferline
+[submodule "pack/greg0ire/start/bufferline"]
+	path = pack/greg0ire/start/bufferline
 	url = https://github.com/bling/vim-bufferline
-[submodule "bundle/php-namespace"]
-	path = bundle/php-namespace
+[submodule "pack/greg0ire/start/php-namespace"]
+	path = pack/greg0ire/start/php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace.git
-[submodule "bundle/phpcomplete"]
-	path = bundle/phpcomplete
+[submodule "pack/greg0ire/start/phpcomplete"]
+	path = pack/greg0ire/start/phpcomplete
 	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule "bundle/tmuxline"]
-	path = bundle/tmuxline
+[submodule "pack/greg0ire/start/tmuxline"]
+	path = pack/greg0ire/start/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim
-[submodule "bundle/neocomplete"]
-	path = bundle/neocomplete
+[submodule "pack/greg0ire/start/neocomplete"]
+	path = pack/greg0ire/start/neocomplete
 	url = https://github.com/Shougo/neocomplete.vim
-[submodule "bundle/puppet"]
-	path = bundle/puppet
+[submodule "pack/greg0ire/start/puppet"]
+	path = pack/greg0ire/start/puppet
 	url = https://github.com/rodjek/vim-puppet.git
-[submodule "bundle/dbext.vim"]
-	path = bundle/dbext.vim
+[submodule "pack/greg0ire/start/dbext.vim"]
+	path = pack/greg0ire/start/dbext.vim
 	url = https://github.com/vim-scripts/dbext.vim
-[submodule "bundle/easy-align"]
-	path = bundle/easy-align
+[submodule "pack/greg0ire/start/easy-align"]
+	path = pack/greg0ire/start/easy-align
 	url = https://github.com/junegunn/vim-easy-align
-[submodule "bundle/zeal"]
-	path = bundle/zeal
+[submodule "pack/greg0ire/start/zeal"]
+	path = pack/greg0ire/start/zeal
 	url = https://github.com/KabbAmine/zeavim.vim
-[submodule "bundle/yaml"]
-	path = bundle/yaml
+[submodule "pack/greg0ire/start/yaml"]
+	path = pack/greg0ire/start/yaml
 	url = https://github.com/stephpy/vim-yaml
-[submodule "bundle/multiple-cursors"]
-	path = bundle/multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule "bundle/fzf"]
-	path = bundle/fzf
+[submodule "pack/greg0ire/start/fzf"]
+	path = pack/greg0ire/start/fzf
 	url = git@github.com:junegunn/fzf.vim.git
-[submodule "bundle/argwrap"]
-	path = bundle/argwrap
+[submodule "pack/greg0ire/start/argwrap"]
+	path = pack/greg0ire/start/argwrap
 	url = git@github.com:FooSoft/vim-argwrap.git
-[submodule "bundle/auto-pairs"]
-	path = bundle/auto-pairs
+[submodule "pack/greg0ire/start/auto-pairs"]
+	path = pack/greg0ire/start/auto-pairs
 	url = git@github.com:jiangmiao/auto-pairs.git
-[submodule "bundle/greplace"]
-	path = bundle/greplace
+[submodule "pack/greg0ire/start/greplace"]
+	path = pack/greg0ire/start/greplace
 	url = git@github.com:skwp/greplace.vim.git
-[submodule "bundle/phpactor"]
-	path = bundle/phpactor
+[submodule "pack/greg0ire/start/phpactor"]
+	path = pack/greg0ire/start/phpactor
 	url = git@github.com:phpactor/phpactor.git
+[submodule "pack/greg0ire/start/vim-airline"]
+	path = pack/greg0ire/start/vim-airline
+	url = git@github.com:vim-airline/vim-airline-themes.git
