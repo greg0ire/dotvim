@@ -52,11 +52,6 @@ autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
 set grepprg=rg\ --vimgrep
 
-set keywordprg=pman
-
-" php related stuff
-set makeprg=php\ -ln\ %
-set errorformat=%m\ in\ %f\ on\ line\ %l
 
 cabbr <expr> %% expand('%:p:h')
 set incsearch
@@ -170,5 +165,3 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   " argwrap
   nnoremap <silent> <leader>q :ArgWrap<CR>
 " }
-
-autocmd FileType php setlocal omnifunc=phpactor#Complete
