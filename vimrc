@@ -171,3 +171,4 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <silent> <leader>q :ArgWrap<CR>
 " }
 
+autocmd FileType php setlocal omnifunc=phpactor#Complete
