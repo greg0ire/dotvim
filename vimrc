@@ -107,6 +107,7 @@ let g:gitgutter_eager = 0 " Avoid gitgutter lag
 let g:neocomplete#enable_at_startup = 1
 let g:syntastic_puppet_puppet_args = '--parser=future'
 let g:airline#extensions#ale#enabled = 1
+let g:ale_php_phpcs_standard = 'PSR2'
 
 let g:puppet_align_hashes = 0
 
