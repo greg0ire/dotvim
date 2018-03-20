@@ -1,8 +1,6 @@
 if filereadable(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
-"autoload plugin
-call pathogen#infect()
 
 set rtp+=~/.fzf
 
