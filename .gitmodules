@@ -133,3 +133,6 @@
 [submodule "pack/greg0ire/start/vdebug"]
 	path = pack/greg0ire/start/vdebug
 	url = git@github.com:vim-vdebug/vdebug.git
+[submodule "pack/greg0ire/start/phpunit"]
+	path = pack/greg0ire/start/phpunit
+	url = git@github.com:afternoon/vim-phpunit.git
