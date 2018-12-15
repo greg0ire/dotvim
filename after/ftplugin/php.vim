@@ -10,3 +10,5 @@ inoremap <buffer> <Leader>u <C-O>:call phpactor#UseAdd()<CR>
 noremap <buffer> <Leader>u :call phpactor#UseAdd()<CR>
 inoremap <buffer> <Leader>e <C-O>:call phpactor#ClassExpand()<CR>
 noremap <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
+
+let g:ale_php_phpstan_level = 'max'
