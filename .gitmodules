@@ -136,3 +136,6 @@
 [submodule "pack/greg0ire/start/phpunit"]
 	path = pack/greg0ire/start/phpunit
 	url = git@github.com:afternoon/vim-phpunit.git
+[submodule "pack/greg0ire/start/vim-test"]
+	path = pack/greg0ire/start/vim-test
+	url = git@github.com:janko-m/vim-test.git
