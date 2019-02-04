@@ -12,3 +12,11 @@ inoremap <buffer> <Leader>e <C-O>:call phpactor#ClassExpand()<CR>
 noremap <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
 
 let g:ale_php_phpstan_level = 'max'
+
+if filereadable('./vendor/bin/phpcbf')
+  let b:ale_fixers = ['phpcbf']
+endif
+
+if filereadable('./.php_cs')
+  let b:ale_fixers = ['php_cs_fixer']
+endif
