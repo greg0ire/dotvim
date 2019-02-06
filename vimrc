@@ -51,7 +51,7 @@ autocmd BufNewFile,BufReadPost .php_cs set filetype=php
 " syntactic coloration when using an editor from MariaDB's client
 autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
-set grepprg=rg\ --vimgrep
+set grepprg=rg\ --vimgrep\ --smart-case
 
 
 cabbr <expr> %% expand('%:p:h')
