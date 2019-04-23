@@ -104,6 +104,9 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_php_phpcs_standard = 'PSR2'
 let g:ale_echo_msg_format = '%linter% %s'
 
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
 let g:puppet_align_hashes = 0
 
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -143,8 +146,8 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <C-l> <C-w>l
 
   " FZF
-  nnoremap <leader>f :FZF<CR>
-  nnoremap <leader>l :FZF src<CR>
+  nnoremap <leader>f :Files<CR>
+  nnoremap <leader>l :Files src<CR>
 
   " sf phpunit
   nnoremap <leader>p :! bin/phpunit --configuration app %<CR>
