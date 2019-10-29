@@ -13,6 +13,7 @@ noremap <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
 noremap <buffer> <Leader>] :call phpactor#GotoDefinition()<CR>
 
 let g:ale_php_phpstan_level = 'max'
+let g:ale_psalm_langserver_options = '--config="$HOME/.config/psalm/psalm.xml"'
 
 if filereadable('./vendor/bin/phpcbf')
   let b:ale_fixers = ['phpcbf']
