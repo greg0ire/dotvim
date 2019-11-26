@@ -1,9 +1,6 @@
 [submodule "pack/greg0ire/start/fugitive"]
 	path = pack/greg0ire/start/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "pack/greg0ire/start/pyflakes"]
-	path = pack/greg0ire/start/pyflakes
-	url = https://github.com/kevinw/pyflakes-vim.git
 [submodule "pack/greg0ire/start/solarized"]
 	path = pack/greg0ire/start/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
