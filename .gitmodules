@@ -139,3 +139,12 @@
 [submodule "pack/greg0ire/start/vim-hug-neovim-rpc"]
 	path = pack/greg0ire/start/vim-hug-neovim-rpc
 	url = git@github.com:roxma/vim-hug-neovim-rpc.git
+[submodule "pack/greg0ire/start/ultisnips"]
+	path = pack/greg0ire/start/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "pack/greg0ire/start/deoplete-phpactor"]
+	path = pack/greg0ire/start/deoplete-phpactor
+	url = git@github.com:kristijanhusak/deoplete-phpactor.git
+[submodule "pack/greg0ire/start/vim-snippets"]
+	path = pack/greg0ire/start/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
