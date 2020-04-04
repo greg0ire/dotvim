@@ -11,6 +11,7 @@ noremap <buffer> <Leader>u :call phpactor#UseAdd()<CR>
 inoremap <buffer> <Leader>e <C-O>:call phpactor#ClassExpand()<CR>
 noremap <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
 noremap <buffer> <Leader>] :call phpactor#GotoDefinition()<CR>
+noremap <buffer> <Leader>te :TestFile<CR>
 
 let g:ale_php_phpstan_level = 'max'
 let g:ale_psalm_langserver_options = '--config="$HOME/.config/psalm/psalm.xml"'
