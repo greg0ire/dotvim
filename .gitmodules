@@ -55,9 +55,6 @@
 [submodule "pack/greg0ire/start/gundo"]
 	path = pack/greg0ire/start/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "pack/greg0ire/start/snipmate"]
-	path = pack/greg0ire/start/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
 [submodule "pack/greg0ire/start/surround"]
 	path = pack/greg0ire/start/surround
 	url = https://github.com/tpope/vim-surround.git
