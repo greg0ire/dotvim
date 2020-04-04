@@ -91,9 +91,6 @@
 [submodule "pack/greg0ire/start/tmuxline"]
 	path = pack/greg0ire/start/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim
-[submodule "pack/greg0ire/start/neocomplete"]
-	path = pack/greg0ire/start/neocomplete
-	url = https://github.com/Shougo/neocomplete.vim
 [submodule "pack/greg0ire/start/dbext.vim"]
 	path = pack/greg0ire/start/dbext.vim
 	url = https://github.com/vim-scripts/dbext.vim
@@ -136,3 +133,12 @@
 [submodule "pack/greg0ire/start/vader"]
 	path = pack/greg0ire/start/vader
 	url = git@github.com:junegunn/vader.vim.git
+[submodule "pack/greg0ire/start/deoplete"]
+	path = pack/greg0ire/start/deoplete
+	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "pack/greg0ire/start/nvim-yarp"]
+	path = pack/greg0ire/start/nvim-yarp
+	url = git@github.com:roxma/nvim-yarp.git
+[submodule "pack/greg0ire/start/vim-hug-neovim-rpc"]
+	path = pack/greg0ire/start/vim-hug-neovim-rpc
+	url = git@github.com:roxma/vim-hug-neovim-rpc.git

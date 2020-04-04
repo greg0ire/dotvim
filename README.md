@@ -5,3 +5,4 @@
 - exuberant ctags
 - a solarized terminal
 - powerline fonts
+- `pip3 install --user pynvim`

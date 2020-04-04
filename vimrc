@@ -98,7 +98,7 @@ let g:php_cs_fixer_verbose = 1                  " Return the output of command i
 
 let g:gitgutter_eager = 0 " Avoid gitgutter lag
 
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 let g:syntastic_puppet_puppet_args = '--parser=future'
 let g:airline#extensions#ale#enabled = 1
 let g:ale_php_phpcs_standard = 'PSR2'
