@@ -1,0 +1,35 @@
+snippet test "PHPUnit / Test method" b
+public function test${1}(): void
+{
+	${VISUAL}${0}
+}
+endsnippet
+
+snippet dataProvider "PHPUnit / data provider" b
+public function ${1}(): Generator
+{
+	yield ${2};
+}
+endsnippet
+
+snippet fun "method" b
+${1:public} function ${2}(): ${3}
+{
+	${4}
+}
+endsnippet
+
+snippet dd "method" b
+dd(${1});
+endsnippet
+
+snippet vdd "method" b
+var_dump(${1});
+die();
+endsnippet
+
+snippet if "if" b
+if (${1}) {
+	${VISUAL}
+}
+endsnippet
