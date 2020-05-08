@@ -6,11 +6,11 @@ setlocal keywordprg=pman
 noremap <buffer> <Leader>x :!phpcbf %<CR>:edit<CR>
 
 " phpactor mappings
-inoremap <buffer> <Leader>u <C-O>:call phpactor#UseAdd()<CR>
-noremap <buffer> <Leader>u :call phpactor#UseAdd()<CR>
-inoremap <buffer> <Leader>e <C-O>:call phpactor#ClassExpand()<CR>
-noremap <buffer> <Leader>e :call phpactor#ClassExpand()<CR>
-noremap <buffer> <Leader>] :call phpactor#GotoDefinition()<CR>
+inoremap <buffer> <Leader>u <C-O>:PhpactorImportClass<CR>
+noremap <buffer> <Leader>u :PhpactorImportClass<CR>
+inoremap <buffer> <Leader>e <C-O>:PhpactorClassExpand<CR>
+noremap <buffer> <Leader>e :PhpactorClassExpand<CR>
+noremap <buffer> <Leader>] :PhpactorGotoDefinition<CR>
 noremap <buffer> <Leader>te :TestFile --testdox<CR>
 
 let g:ale_php_phpstan_level = 'max'
