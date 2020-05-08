@@ -14,7 +14,9 @@ noremap <buffer> <Leader>] :PhpactorGotoDefinition<CR>
 noremap <buffer> <Leader>te :TestFile --testdox<CR>
 
 let g:ale_php_phpstan_level = 'max'
-let g:ale_psalm_langserver_options = '--config="$HOME/.config/psalm/psalm.xml"'
+if !filereadable('./vendor/bin/psalm')
+  let g:ale_psalm_langserver_options = '--config="$HOME/.config/psalm/psalm.xml"'
+endif
 
 if filereadable('./vendor/bin/phpcbf')
   let b:ale_fixers = ['phpcbf']
