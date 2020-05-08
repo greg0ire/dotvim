@@ -210,6 +210,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   " FZF
   nnoremap <leader>f :Files<CR>
   nnoremap <leader>l :Files src<CR>
+  inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
   " sf phpunit
   nnoremap <leader>p :! bin/phpunit --configuration app %<CR>
