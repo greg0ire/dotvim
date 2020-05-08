@@ -5,6 +5,8 @@ endif
 
 set rtp+=~/.fzf
 
+set path=$PWD/**
+
 set noswapfile
 
 " don't try to be compatible with old specs of vi
