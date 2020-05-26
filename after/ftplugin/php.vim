@@ -22,6 +22,10 @@ if filereadable('./vendor/bin/phpcbf')
   let b:ale_fixers = ['phpcbf']
 endif
 
+if filereadable('./vendor/bin/phpstan')
+  let g:ale_php_phpstan_executable = 'vendor/bin/phpstan'
+endif
+
 if filereadable('./.php_cs')
   let b:ale_fixers = ['php_cs_fixer']
 endif
