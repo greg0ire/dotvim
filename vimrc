@@ -109,6 +109,7 @@ autocmd BufNewFile,BufReadPost .php_cs set filetype=php
 autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
 set grepprg=rg\ --vimgrep\ --smart-case
+set grepformat=%f:%l:%c:%m
 
 
 cabbr <expr> %% expand('%:p:h')
