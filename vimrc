@@ -46,9 +46,10 @@ function! PackagerInit() abort
   call packager#add('tpope/vim-sleuth', { 'name': 'sleuth' })
   call packager#add('tpope/vim-surround', { 'name': 'surround' })
   call packager#add('tpope/vim-unimpaired', { 'name': 'unimpaired' })
-  call packager#add('vim-airline/vim-airline', { 'name': 'airline' })
-  call packager#add('vim-airline/vim-airline-themes', { 'name': 'airline-themes' })
+  call packager#add('vim-airline/vim-airline', { 'name': 'airline', 'type': 'opt' })
+  call packager#add('vim-airline/vim-airline-themes', { 'name': 'airline-themes', 'type': 'opt' })
   call packager#add('vim-scripts/argtextobj.vim', { 'name': 'argtextobj' })
+  call packager#add('glacambre/firenvim', { 'name': 'firenvim', 'do': ':firenvim#install(0)', 'type': 'opt' })
 
   "Loaded only for specific filetypes on demand. Requires autocommands below.
   call packager#add('phpactor/phpactor', { 'do': 'composer install', 'type': 'opt' })
@@ -159,7 +160,6 @@ let g:gitgutter_eager = 0 " Avoid gitgutter lag
 let g:deoplete#enable_at_startup = 1
 
 let g:syntastic_puppet_puppet_args = '--parser=future'
-let g:airline#extensions#ale#enabled = 1
 let g:ale_echo_msg_format = '%linter% %s'
 let g:ale_sign_error = '💩'
 let g:ale_sign_warning = '⚠️'
@@ -224,3 +224,31 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   " gets the git history of the visual selection
   vnoremap <leader>l :<c-u>exe '!git log -L' line("'<").','.line("'>").':'.expand('%')<CR>
 " }
+
+
+if exists('g:started_by_firenvim')
+  packadd firenvim
+  set background=light
+  set laststatus=0
+  augroup greg0ire
+    autocmd!
+    au BufEnter github.com_*.txt set filetype=markdown
+  augroup END
+  let g:firenvim_config = {
+    \ 'globalSettings': {
+        \ 'alt': 'all',
+    \  },
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'cmdline': 'neovim',
+            \ 'priority': 0,
+            \ 'selector': 'textarea',
+            \ 'takeover': 'never',
+        \ },
+    \ }
+  \ }
+else
+  packadd airline
+  packadd airline-themes
+  let g:airline#extensions#ale#enabled = 1
+endif
