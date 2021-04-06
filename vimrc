@@ -162,7 +162,7 @@ let g:deoplete#enable_at_startup = 1
 let g:syntastic_puppet_puppet_args = '--parser=future'
 let g:ale_echo_msg_format = '%linter% %s'
 let g:ale_sign_error = '💩'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_warning = '🙊'
 
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
