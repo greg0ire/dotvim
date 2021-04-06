@@ -222,7 +222,7 @@ au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
   nnoremap <silent> <leader>q :ArgWrap<CR>
 
   " gets the git history of the visual selection
-  vnoremap <leader>l :<c-u>exe '!git log -L' line("'<").','.line("'>").':'.expand('%')<CR>
+  vnoremap <leader>l :<c-u>exe ':term git log -L' line("'<").','.line("'>").':'.expand('%')<CR>
 " }
 
 
