@@ -12,8 +12,8 @@ inoremap <buffer> <Leader>e <C-O>:PhpactorClassExpand<CR>
 noremap <buffer> <Leader>e :PhpactorClassExpand<CR>
 noremap <buffer> <Leader>] :PhpactorGotoDefinition<CR>
 noremap <buffer> <Leader>te :TestFile --testdox<CR>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 
 let g:ale_php_phpstan_level = 'max'
 if !filereadable('./vendor/bin/psalm')
