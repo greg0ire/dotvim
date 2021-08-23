@@ -49,7 +49,7 @@ function! PackagerInit() abort
   call packager#add('vim-airline/vim-airline', { 'name': 'airline', 'type': 'opt' })
   call packager#add('vim-airline/vim-airline-themes', { 'name': 'airline-themes', 'type': 'opt' })
   call packager#add('vim-scripts/argtextobj.vim', { 'name': 'argtextobj' })
-  call packager#add('glacambre/firenvim', { 'name': 'firenvim', 'do': ':firenvim#install(0)', 'type': 'opt' })
+  call packager#add('glacambre/firenvim', { 'name': 'firenvim', 'do': ':call firenvim#install(0)', 'type': 'opt' })
 
   "Loaded only for specific filetypes on demand. Requires autocommands below.
   call packager#add('phpactor/phpactor', { 'do': 'composer install', 'type': 'opt' })
