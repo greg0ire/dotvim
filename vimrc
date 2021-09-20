@@ -24,7 +24,6 @@ function! PackagerInit() abort
   call packager#add('airblade/vim-gitgutter', { 'name': 'gitgutter' })
   call packager#add('altercation/vim-colors-solarized', { 'name': 'solarized' })
   call packager#add('andymass/vim-matchup', { 'name': 'matchup' })
-  call packager#add('bling/vim-bufferline', { 'name': 'bufferline' })
   call packager#add('chr4/nginx.vim', { 'name': 'nginx' })
   call packager#add('dense-analysis/ale')
   call packager#add('janko-m/vim-test', { 'name': 'test' })
@@ -243,4 +242,5 @@ else
   packadd airline
   packadd airline-themes
   let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
 endif
