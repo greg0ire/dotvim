@@ -1,6 +1,3 @@
-inoremap <buffer> <Leader>e <C-O>:PhpactorClassExpand<CR>
-noremap <buffer> <Leader>e :PhpactorClassExpand<CR>
-
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {

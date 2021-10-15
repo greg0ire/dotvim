@@ -22,7 +22,7 @@ function! PackagerInit() abort
   call packager#add('Shougo/deoplete.nvim', { 'name': 'deoplete' })
   call packager#add('SirVer/ultisnips')
   call packager#add('airblade/vim-gitgutter', { 'name': 'gitgutter' })
-  call packager#add('altercation/vim-colors-solarized', { 'name': 'solarized' })
+  call packager#add('RRethy/nvim-base16', { 'name': 'base16' })
   call packager#add('andymass/vim-matchup', { 'name': 'matchup' })
   call packager#add('chr4/nginx.vim', { 'name': 'nginx' })
   call packager#add('dense-analysis/ale')
@@ -34,6 +34,7 @@ function! PackagerInit() abort
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
   call packager#add('lumiliet/vim-twig', { 'name': 'twig' })
   call packager#add('michaeljsmith/vim-indent-object')
+  call packager#add('nvim-treesitter/nvim-treesitter', { 'name': 'treesitter', 'branch': '0.5-compat', 'do': ':TSUpdate' })
   call packager#add('pbrisbin/vim-mkdir', { 'name': 'mkdir' })
   call packager#add('preservim/nerdtree')
   call packager#add('roxma/nvim-yarp')
@@ -88,10 +89,7 @@ set number " hybrid mode (requires a recent vim)
 set undofile
 set undodir=~/.vim/undo
 
-colorscheme solarized
-let g:solarized_termtrans=1
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+colorscheme base16-solarized-dark
 
 set background=dark
 filetype on
