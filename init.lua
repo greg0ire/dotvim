@@ -1,3 +1,4 @@
+vim.cmd([[
 call has('python3')
 if filereadable(glob('~/.vimrc.local'))
   source ~/.vimrc.local
@@ -241,3 +242,4 @@ else
   let g:airline#extensions#ale#enabled = 1
   let g:airline#extensions#tabline#enabled = 1
 endif
+]])
