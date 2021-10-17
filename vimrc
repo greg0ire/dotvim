@@ -50,7 +50,7 @@ function! PackagerInit() abort
   call packager#add('glacambre/firenvim', { 'name': 'firenvim', 'do': ':call firenvim#install(0)', 'type': 'opt' })
 
   "Loaded only for specific filetypes on demand. Requires autocommands below.
-  call packager#add('phpactor/phpactor', { 'do': 'composer install', 'type': 'opt' })
+  call packager#add('phpactor/phpactor', { 'do': 'composer install' })
 endfunction
 
 
