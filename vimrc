@@ -32,6 +32,7 @@ function! PackagerInit() abort
   call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
   call packager#add('lumiliet/vim-twig', { 'name': 'twig' })
   call packager#add('michaeljsmith/vim-indent-object')
+  call packager#add('neovim/nvim-lspconfig')
   call packager#add('nvim-treesitter/nvim-treesitter', { 'name': 'treesitter', 'branch': '0.5-compat', 'do': ':TSUpdate' })
   call packager#add('pbrisbin/vim-mkdir', { 'name': 'mkdir' })
   call packager#add('preservim/nerdtree')

@@ -1,6 +1,3 @@
-setlocal omnifunc=phpactor#Complete
-setlocal keywordprg=pman
-
 " Not customizing equalprg or formatprg for this since phpcbf is not a filter,
 " meaning it does not work well on lines or blocks, but on whole files.
 noremap <buffer> <Leader>x :!phpcbf %<CR>:edit<CR>
@@ -35,6 +32,25 @@ endif
 " php-indent options
 let g:PHP_noArrowMatching = 1
 let g:PHP_vintage_case_default_indent = 1
+
+lua << EOF
+  local custom_lsp_attach = function(client)
+    local opts = { noremap=true, silent=true }
+    vim.api.nvim_buf_set_keymap(0, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+    vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+    -- Use LSP as the handler for omnifunc.
+    --    See `:help omnifunc` and `:help ins-completion` for more information.
+    vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+    -- For plugins with an `on_attach` callback, call them here. For example:
+    -- require('completion').on_attach()
+  end
+
+  require'lspconfig'.phpactor.setup{
+    on_attach=custom_lsp_attach
+  }
+EOF
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
