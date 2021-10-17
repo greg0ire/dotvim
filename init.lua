@@ -8,11 +8,6 @@ set path=$PWD/**
 
 set noswapfile
 
-" don't try to be compatible with old specs of vi
-if &compatible
-  set nocompatible
-endif
-
 " Load packager only when you need it
 function! PackagerInit() abort
   packadd vim-packager
