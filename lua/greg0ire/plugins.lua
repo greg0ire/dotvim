@@ -44,3 +44,33 @@ require('packager').setup(function(packager)
   })
   packager.add('phpactor/phpactor', { ['do'] = 'composer install' })
 end)
+
+vim.cmd([[
+if exists('g:started_by_firenvim')
+  packadd firenvim
+  set background=light
+  set laststatus=0
+  augroup greg0ire
+    autocmd!
+    au BufEnter github.com_*.txt set filetype=markdown
+  augroup END
+  let g:firenvim_config = {
+    \ 'globalSettings': {
+        \ 'alt': 'all',
+    \  },
+    \ 'localSettings': {
+        \ '.*': {
+            \ 'cmdline': 'neovim',
+            \ 'priority': 0,
+            \ 'selector': 'textarea',
+            \ 'takeover': 'never',
+        \ },
+    \ }
+  \ }
+else
+  packadd airline
+  packadd airline-themes
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
+endif
+]])

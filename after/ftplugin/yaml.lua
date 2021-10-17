@@ -1,7 +1,9 @@
-inoremap <buffer> <Leader>e <C-O>:PhpactorClassExpand<CR>
-noremap <buffer> <Leader>e :PhpactorClassExpand<CR>
+local map = vim.api.nvim_set_keymap
+local silentnoremap = {noremap = true, silent = true }
 
-lua <<EOF
+map('i', '<Leader>e', '<C-O> :PhpactorClassExpand<CR>', silentnoremap)
+map('n', '<Leader>e', ':PhpactorClassExpand<CR>', silentnoremap)
+
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -17,4 +19,3 @@ require'nvim-treesitter.configs'.setup {
     },
   }
 }
-EOF

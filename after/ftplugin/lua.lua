@@ -1,8 +1,6 @@
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = true -- did not get indent to work yet
+    enable = true
   },
   incremental_selection = {
     enable = true,
@@ -14,4 +12,3 @@ require'nvim-treesitter.configs'.setup {
     },
   }
 }
-EOF
