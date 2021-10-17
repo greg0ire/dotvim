@@ -3,8 +3,6 @@ if filereadable(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
-set rtp+=~/.fzf
-
 set path=$PWD/**
 
 set noswapfile
