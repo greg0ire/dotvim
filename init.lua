@@ -1,3 +1,5 @@
+require('greg0ire.plugins')
+
 vim.cmd([[
 call has('python3')
 if filereadable(glob('~/.vimrc.local'))
@@ -8,53 +10,6 @@ set path=$PWD/**
 
 set noswapfile
 
-" Load packager only when you need it
-function! PackagerInit() abort
-  packadd vim-packager
-  call packager#init({ 'dir': '~/.vim/pack/greg0ire' })
-  call packager#add('FooSoft/vim-argwrap', { 'name': 'argwrap' })
-  call packager#add('Shougo/deoplete.nvim', { 'name': 'deoplete' })
-  call packager#add('SirVer/ultisnips')
-  call packager#add('airblade/vim-gitgutter', { 'name': 'gitgutter' })
-  call packager#add('RRethy/nvim-base16', { 'name': 'base16' })
-  call packager#add('andymass/vim-matchup', { 'name': 'matchup' })
-  call packager#add('chr4/nginx.vim', { 'name': 'nginx' })
-  call packager#add('dense-analysis/ale')
-  call packager#add('janko-m/vim-test', { 'name': 'test' })
-  call packager#add('jiangmiao/auto-pairs')
-  call packager#add('junegunn/fzf.vim', { 'name': 'fzf' })
-  call packager#add('junegunn/vader.vim', { 'name': 'vader' })
-  call packager#add('kristijanhusak/deoplete-phpactor')
-  call packager#add('kristijanhusak/vim-packager', { 'type': 'opt' })
-  call packager#add('lumiliet/vim-twig', { 'name': 'twig' })
-  call packager#add('michaeljsmith/vim-indent-object')
-  call packager#add('neovim/nvim-lspconfig')
-  call packager#add('nvim-treesitter/nvim-treesitter', { 'name': 'treesitter', 'branch': '0.5-compat', 'do': ':TSUpdate' })
-  call packager#add('pbrisbin/vim-mkdir', { 'name': 'mkdir' })
-  call packager#add('preservim/nerdtree')
-  call packager#add('roxma/nvim-yarp')
-  call packager#add('roxma/vim-hug-neovim-rpc')
-  call packager#add('tpope/vim-commentary', { 'name': 'commentary' })
-  call packager#add('tpope/vim-eunuch', { 'name': 'eunuch' })
-  call packager#add('tpope/vim-fugitive', { 'name': 'fugitive' })
-  call packager#add('tpope/vim-repeat', { 'name': 'repeat' })
-  call packager#add('tpope/vim-sleuth', { 'name': 'sleuth' })
-  call packager#add('tpope/vim-surround', { 'name': 'surround' })
-  call packager#add('tpope/vim-unimpaired', { 'name': 'unimpaired' })
-  call packager#add('vim-airline/vim-airline', { 'name': 'airline', 'type': 'opt' })
-  call packager#add('vim-airline/vim-airline-themes', { 'name': 'airline-themes', 'type': 'opt' })
-  call packager#add('vim-scripts/argtextobj.vim', { 'name': 'argtextobj' })
-  call packager#add('glacambre/firenvim', { 'name': 'firenvim', 'do': ':call firenvim#install(0)', 'type': 'opt' })
-
-  "Loaded only for specific filetypes on demand. Requires autocommands below.
-  call packager#add('phpactor/phpactor', { 'do': 'composer install' })
-endfunction
-
-
-command! PackagerInstall call PackagerInit() | call packager#install()
-command! -bang PackagerUpdate call PackagerInit() | call packager#update({ 'force_hooks': '<bang>' })
-command! PackagerClean call PackagerInit() | call packager#clean()
-command! PackagerStatus call PackagerInit() | call packager#status()
 
 " add some color
 syntax on
