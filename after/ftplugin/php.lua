@@ -48,23 +48,6 @@ map('n', '<Leader>e', ':PhpactorClassExpand<CR>', silentnoremap)
 vim.g.PHP_noArrowMatching = true
 vim.g.PHP_vintage_case_default_indent = 1
 
-local custom_lsp_attach = function(client)
-  local opts = { noremap=true, silent=true }
-  vim.api.nvim_buf_set_keymap(0, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  vim.api.nvim_buf_set_keymap(0, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
-  vim.api.nvim_buf_set_keymap(0, 'n', '<c-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
-  -- Use LSP as the handler for omnifunc.
-  --    See `:help omnifunc` and `:help ins-completion` for more information.
-  vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-  -- For plugins with an `on_attach` callback, call them here. For example:
-  -- require('completion').on_attach()
-end
-
-require'lspconfig'.phpactor.setup{
-  on_attach=custom_lsp_attach
-}
-
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,

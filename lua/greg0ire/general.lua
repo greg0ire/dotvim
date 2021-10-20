@@ -36,5 +36,3 @@ g.ale_sign_warning = '🙊'
 
 g.airline_powerline_fonts = 1
 g.airline_theme = 'solarized'
-
-g['deoplete#enable_at_startup'] = 1
