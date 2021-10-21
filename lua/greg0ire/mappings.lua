@@ -27,7 +27,7 @@ map('n', '<C-l>', '<C-w>l', silentnoremap)
 -- FZF
 map('n', '<leader>f', ':Files<CR>', silentnoremap)
 map('n', '<leader>l', ':Files src<CR>', silentnoremap)
-map('i', '<expr> <C-x><C-f>', "fzf#vim#complete#path('rg --files')", silentnoremap)
+map('i', '<C-x><C-f>', "fzf#vim#complete#path('rg --files')", { noremap = true, expr = true })
 -- access buffers faster
 map('n', '<leader>b', ':Buffers<CR>', silentnoremap)
 
