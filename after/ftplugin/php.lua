@@ -44,6 +44,9 @@ map('n', '<Leader>u', ':PhpactorImportClass<CR>', silentnoremap)
 map('i', '<Leader>e', '<C-O> :PhpactorClassExpand<CR>', silentnoremap)
 map('n', '<Leader>e', ':PhpactorClassExpand<CR>', silentnoremap)
 
+-- vim-test mappings
+map('n', '<Leader>te', ':TestFile --testdox<CR>', silentnoremap)
+
 -- php-indent options
 vim.g.PHP_noArrowMatching = true
 vim.g.PHP_vintage_case_default_indent = 1
