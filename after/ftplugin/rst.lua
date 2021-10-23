@@ -1,5 +1,5 @@
 vim.o.textwidth = 72
-vim.o.colorcolumn = 72
+vim.o.colorcolumn = '72'
 
 vim.api.nvim_set_keymap(
   'i',
