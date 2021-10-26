@@ -31,21 +31,21 @@ if not file_exists('./vendor/bin/psalm')
 
 vim.g.ale_php_phpstan_level = 'max'
 
-local map = vim.api.nvim_set_keymap
+local map = vim.api.nvim_buf_set_keymap
 local silentnoremap = {noremap = true, silent = true }
 
 -- ale mappings
-map('n', '<Leader>k', '<Plug>(ale_previous_wrap)', { silent = true })
-map('n', '<Leader>j', '<Plug>(ale_next_wrap)', { silent = true })
+map(0, 'n', '<Leader>k', '<Plug>(ale_previous_wrap)', { silent = true })
+map(0, 'n', '<Leader>j', '<Plug>(ale_next_wrap)', { silent = true })
 
 -- phpactor mappings
-map('i', '<Leader>u', '<C-O> :PhpactorImportClass<CR>', silentnoremap)
-map('n', '<Leader>u', ':PhpactorImportClass<CR>', silentnoremap)
-map('i', '<Leader>e', '<C-O> :PhpactorClassExpand<CR>', silentnoremap)
-map('n', '<Leader>e', ':PhpactorClassExpand<CR>', silentnoremap)
+map(0, 'i', '<Leader>u', '<C-O> :PhpactorImportClass<CR>', silentnoremap)
+map(0, 'n', '<Leader>u', ':PhpactorImportClass<CR>', silentnoremap)
+map(0, 'i', '<Leader>e', '<C-O> :PhpactorClassExpand<CR>', silentnoremap)
+map(0, 'n', '<Leader>e', ':PhpactorClassExpand<CR>', silentnoremap)
 
 -- vim-test mappings
-map('n', '<Leader>te', ':TestFile --testdox<CR>', silentnoremap)
+map(0, 'n', '<Leader>te', ':TestFile --testdox<CR>', silentnoremap)
 
 -- php-indent options
 vim.g.PHP_noArrowMatching = true
