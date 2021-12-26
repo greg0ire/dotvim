@@ -4,7 +4,6 @@ local wo = vim.wo
 
 o.swapfile = false -- Disable swap files
 
-g.colors_name = 'base16-solarized-dark'
 o.termguicolors = true
 g.gdefault = true
 
