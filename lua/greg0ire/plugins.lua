@@ -37,6 +37,7 @@ require('packager').setup(function(packager)
   packager.add('vim-airline/vim-airline', { name = 'airline', type = 'opt' })
   packager.add('vim-airline/vim-airline-themes', { name = 'airline-themes', type = 'opt' })
   packager.add('vim-scripts/argtextobj.vim', { name = 'argtextobj' })
+  packager.add('github/copilot.vim')
   packager.add('glacambre/firenvim', {
     name = 'firenvim',
     ['do'] = ':call firenvim#install(0)',
