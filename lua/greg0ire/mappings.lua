@@ -25,15 +25,20 @@ map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
 -- FZF
-map('n', '<leader>f', ':Files<CR>', silentnoremap)
-map('n', '<leader>l', ':Files src<CR>', silentnoremap)
+map('n', '<leader>f', ":lua require('telescope.builtin').git_files()<cr>", silentnoremap)
+map(
+  'n',
+  '<leader>l',
+  ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude_standard', '--cached', 'src'}})<cr>",
+  silentnoremap
+)
 map('i', '<C-x><C-f>', "fzf#vim#complete#path('rg --files')", { noremap = true, expr = true })
 -- access buffers faster
-map('n', '<leader>b', ':Buffers<CR>', silentnoremap)
+map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremap)
 
 -- search for word under cursor
 map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
-map('n', '<leader>ta', ':Tags<CR>', silentnoremap)
+map('n', '<leader>ta', ":lua require('telescope.builtin').tags()<CR>", silentnoremap)
 
 -- argwrap
 map('n', '<leader>q', ':ArgWrap<CR>', silentnoremap)
