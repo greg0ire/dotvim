@@ -24,7 +24,7 @@ map('n', '<C-j>', '<C-w>j', silentnoremap)
 map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
--- FZF
+-- Telescope
 map('n', '<leader>f', ":lua require('telescope.builtin').git_files()<cr>", silentnoremap)
 map(
   'n',
@@ -39,6 +39,7 @@ map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentn
 -- search for word under cursor
 map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
 map('n', '<leader>ta', ":lua require('telescope.builtin').tags()<CR>", silentnoremap)
+map('n', '<leader>c', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
 
 -- argwrap
 map('n', '<leader>q', ':ArgWrap<CR>', silentnoremap)
