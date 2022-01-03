@@ -15,9 +15,3 @@ vim.api.nvim_buf_set_keymap(
   '<C-O>:call phpactor#ClassExpand()<CR>',
   { noremap = true, silent = true }
 )
-
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true
-  }
-}
