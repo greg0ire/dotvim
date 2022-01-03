@@ -23,9 +23,9 @@ require('packager').setup(function(packager)
   packager.add('quangnguyen30192/cmp-nvim-ultisnips')
   packager.add('nvim-treesitter/nvim-treesitter', {
     name = 'treesitter',
-    branch = '0.5-compat',
     ['do'] = ':TSUpdate'
   })
+  packager.add('nvim-treesitter/nvim-treesitter-textobjects')
   packager.add('pbrisbin/vim-mkdir', { name = 'mkdir' })
   packager.add('preservim/nerdtree')
   packager.add('tpope/vim-commentary', { name = 'commentary' })
@@ -38,7 +38,6 @@ require('packager').setup(function(packager)
   packager.add('tpope/vim-unimpaired', { name = 'unimpaired' })
   packager.add('vim-airline/vim-airline', { name = 'airline', type = 'opt' })
   packager.add('vim-airline/vim-airline-themes', { name = 'airline-themes', type = 'opt' })
-  packager.add('vim-scripts/argtextobj.vim', { name = 'argtextobj' })
   packager.add('github/copilot.vim')
   packager.add('glacambre/firenvim', {
     name = 'firenvim',
