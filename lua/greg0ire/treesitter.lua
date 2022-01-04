@@ -1,6 +1,9 @@
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = {
+      "php" -- needed for the cursor to be properly indented on new lines
+    },
   },
   incremental_selection = {
     enable = true,
