@@ -35,11 +35,12 @@ map(
 map('i', '<C-x><C-f>', "fzf#vim#complete#path('rg --files')", { noremap = true, expr = true })
 -- access buffers faster
 map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremap)
+map('n', '<leader>ta', ":lua require('telescope.builtin').tags()<CR>", silentnoremap)
+map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
+map('n', '<leader>ca', ":lua require('telescope.builtin').lsp_code_actions()<CR>", silentnoremap)
 
 -- search for word under cursor
 map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
-map('n', '<leader>ta', ":lua require('telescope.builtin').tags()<CR>", silentnoremap)
-map('n', '<leader>c', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
 
 -- argwrap
 map('n', '<leader>q', ':ArgWrap<CR>', silentnoremap)
