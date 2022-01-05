@@ -32,7 +32,6 @@ map(
   ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude_standard', '--cached', 'src'}})<cr>",
   silentnoremap
 )
-map('i', '<C-x><C-f>', "fzf#vim#complete#path('rg --files')", { noremap = true, expr = true })
 -- access buffers faster
 map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremap)
 map('n', '<leader>ta', ":lua require('telescope.builtin').tags()<CR>", silentnoremap)
