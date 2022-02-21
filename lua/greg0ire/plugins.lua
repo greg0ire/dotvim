@@ -46,6 +46,7 @@ require('packager').setup(function(packager)
     type = 'opt'
   })
   packager.add('phpactor/phpactor', { ['do'] = 'composer install' })
+  packager.add('vim-vdebug/vdebug')
 end)
 
 vim.cmd([[
