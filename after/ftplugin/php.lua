@@ -29,8 +29,6 @@ if not file_exists('./vendor/bin/psalm')
     vim.g.ale_psalm_langserver_options = '--config="$HOME/.config/psalm/psalm.xml"'
   end
 
-vim.g.ale_php_phpstan_level = 'max'
-
 local map = vim.api.nvim_buf_set_keymap
 local silentnoremap = {noremap = true, silent = true }
 
