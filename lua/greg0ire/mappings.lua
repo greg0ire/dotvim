@@ -25,7 +25,7 @@ map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
 -- Telescope
-map('n', '<leader>f', ":lua require('telescope.builtin').git_files()<cr>", silentnoremap)
+map('n', '<leader>f', ":lua require('telescope.builtin').find_files()<cr>", silentnoremap)
 map(
   'n',
   '<leader>l',
