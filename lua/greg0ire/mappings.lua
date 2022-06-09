@@ -36,7 +36,7 @@ map(
 map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremap)
 map('n', '<leader>ta', ":lua require('telescope.builtin').lsp_workspace_symbols()<CR>", silentnoremap)
 map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
-map('n', '<leader>ca', ":lua require('telescope.builtin').lsp_code_actions()<CR>", silentnoremap)
+map('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>", silentnoremap)
 
 -- search for word under cursor
 map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
