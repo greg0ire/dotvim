@@ -14,8 +14,4 @@ highlight clear SignColumn      " SignColumn should match background for
                                 " things like vim-gitgutter
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
-
-" remove trailing spaces
-autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 colorscheme base16-solarized-dark

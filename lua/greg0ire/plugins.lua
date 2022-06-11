@@ -23,6 +23,7 @@ require('packager').setup(function(packager)
   packager.add('hrsh7th/cmp-buffer')
   packager.add('hrsh7th/cmp-nvim-lsp')
   packager.add('quangnguyen30192/cmp-nvim-ultisnips')
+  packager.add('mcauley-penney/tidy.nvim')
   packager.add('nvim-treesitter/nvim-treesitter', {
     name = 'treesitter',
     ['do'] = ':TSUpdate'
@@ -49,6 +50,8 @@ require('packager').setup(function(packager)
   packager.add('phpactor/phpactor', { ['do'] = 'composer install' })
   packager.add('vim-vdebug/vdebug')
 end)
+
+require("tidy").setup()
 
 vim.cmd([[
 if exists('g:started_by_firenvim')
