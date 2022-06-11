@@ -18,7 +18,6 @@ highlight clear SignColumn      " SignColumn should match background for
 " remove trailing spaces
 autocmd FileType less,sass,yml,css,html,php,twig,xml,yaml,sh autocmd BufWritePre <buffer> :call setline(1, map(getline(1,'$'), 'substitute(v:val,"\\s\\+$","","")'))
 autocmd BufRead,BufNewFile /etc/nginx/* setf nginx
-autocmd BufNewFile,BufReadPost .php_cs set filetype=php
 " syntactic coloration when using an editor from MariaDB's client
 autocmd BufRead,BufNewFile /var/tmp/sql*,/tmp/sql* setf sql
 
