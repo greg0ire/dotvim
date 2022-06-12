@@ -1,5 +1,3 @@
-
-call has('python3')
 if filereadable(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
