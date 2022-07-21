@@ -51,7 +51,9 @@ require('packager').setup(function(packager)
   packager.add('vim-vdebug/vdebug')
 end)
 
-require("tidy").setup()
+require("tidy").setup({
+  filetype_exclude = { 'diff', 'txt' }
+})
 
 vim.cmd([[
 if exists('g:started_by_firenvim')
