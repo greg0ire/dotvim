@@ -1,7 +1,3 @@
-if filereadable(glob('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
-
 set path=$PWD/**
 
 set tags+=.git/tags
