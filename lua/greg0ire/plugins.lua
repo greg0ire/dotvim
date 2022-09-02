@@ -28,6 +28,7 @@ require('packager').setup(function(packager)
     name = 'treesitter',
     ['do'] = ':TSUpdate'
   })
+  packager.add('nvim-treesitter/nvim-treesitter-context')
   packager.add('nvim-treesitter/nvim-treesitter-textobjects')
   packager.add('pbrisbin/vim-mkdir', { name = 'mkdir' })
   packager.add('preservim/nerdtree')
