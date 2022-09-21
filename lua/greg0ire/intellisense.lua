@@ -53,3 +53,17 @@ require'lspconfig'.phpactor.setup{
     vim.lsp.protocol.make_client_capabilities()
   )
 }
+
+local null_ls = require("null-ls")
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.php,
+    null_ls.builtins.diagnostics.phpcs.with({
+      prefer_local = 'vendor/bin'
+    }),
+    null_ls.builtins.formatting.phpcbf.with({
+      prefer_local = 'vendor/bin'
+    }),
+    null_ls.builtins.diagnostics.shellcheck,
+  },
+})

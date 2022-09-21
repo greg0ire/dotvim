@@ -1,13 +1,13 @@
 -- Load packager only when you need it
 vim.cmd [[packadd vim-packager]]
 require('packager').setup(function(packager)
+  packager.add('jose-elias-alvarez/null-ls.nvim')
   packager.add('FooSoft/vim-argwrap', { name = 'argwrap' })
   packager.add('SirVer/ultisnips')
   packager.add('airblade/vim-gitgutter', { name = 'gitgutter' })
   packager.add('fnune/base16-vim', { name = 'base16' })
   packager.add('andymass/vim-matchup', { name = 'matchup' })
   packager.add('chr4/nginx.vim', { name = 'nginx' })
-  packager.add('dense-analysis/ale')
   packager.add('fpob/nette.vim')
   packager.add('github/copilot.vim')
   packager.add('janko-m/vim-test', { name = 'test' })
@@ -81,7 +81,6 @@ if exists('g:started_by_firenvim')
 else
   packadd airline
   packadd airline-themes
-  let g:airline#extensions#ale#enabled = 1
   let g:airline#extensions#tabline#enabled = 1
 endif
 ]])

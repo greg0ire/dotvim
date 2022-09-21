@@ -30,9 +30,5 @@ o.colorcolumn = '81'
 wo.relativenumber = true -- display line numbers relative to the current line
 wo.number = true -- hybrid mode (requires a recent vim)
 
-g.ale_echo_msg_format = '%linter% %s'
-g.ale_sign_error = '💩'
-g.ale_sign_warning = '🙊'
-
 g.airline_powerline_fonts = 1
 g.airline_theme = 'solarized'
