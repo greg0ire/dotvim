@@ -47,12 +47,14 @@ local custom_lsp_attach = function(client)
     vim.api.nvim_create_augroup("lsp_document_highlight", { clear = true })
     vim.api.nvim_clear_autocmds { buffer = bufnr, group = "lsp_document_highlight" }
     vim.api.nvim_create_autocmd("CursorHold", {
+      pattern = "*.php",
       callback = vim.lsp.buf.document_highlight,
       buffer = bufnr,
       group = "lsp_document_highlight",
       desc = "Document Highlight",
     })
     vim.api.nvim_create_autocmd("CursorMoved", {
+      pattern = "*.php",
       callback = vim.lsp.buf.clear_references,
       buffer = bufnr,
       group = "lsp_document_highlight",
