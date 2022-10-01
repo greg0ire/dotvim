@@ -32,3 +32,5 @@ wo.number = true -- hybrid mode (requires a recent vim)
 
 g.airline_powerline_fonts = 1
 g.airline_theme = 'solarized'
+
+o.updatetime = 1000 -- faster highlight updates
