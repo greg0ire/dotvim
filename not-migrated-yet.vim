@@ -1,7 +1,5 @@
 set path=$PWD/**
 
-set tags+=.git/tags
-
 cabbr <expr> %% expand('%:p:h')
 
 highlight clear SignColumn      " SignColumn should match background for
