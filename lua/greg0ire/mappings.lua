@@ -52,11 +52,3 @@ map(
   ":<c-u>exe ':term git log -L' line(\"'<\").','.line(\"'>\").':'.expand('%')<CR>",
   silentnoremap
 )
-
--- ctags update
-map(
-  'n',
-  '<Leader>tu',
-  ":! .git/hooks/php/ctags/update-ctags<CR>",
-  silentnoremap
-)
