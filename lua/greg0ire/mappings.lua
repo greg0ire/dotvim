@@ -25,7 +25,7 @@ map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
 -- Telescope
-map('n', '<leader>f', ":lua require('telescope.builtin').find_files()<cr>", silentnoremap)
+map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>", silentnoremap)
 map(
   'n',
   '<leader>l',
@@ -37,6 +37,7 @@ map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentn
 map('n', '<leader>ta', ":lua require('telescope.builtin').lsp_workspace_symbols()<CR>", silentnoremap)
 map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
 map('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>", silentnoremap)
+map('n', '<leader>fm', ":lua vim.lsp.buf.format()<CR>", silentnoremap)
 map('n', '<leader>tr', ":lua require('telescope.builtin').lsp_references()<CR>", silentnoremap)
 
 -- search for word under cursor
