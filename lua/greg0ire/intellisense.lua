@@ -68,9 +68,7 @@ end
 
 require'lspconfig'.phpactor.setup{
   on_attach=custom_lsp_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  )
+  capabilities = require('cmp_nvim_lsp').default_capabilities()
 }
 
 local null_ls = require("null-ls")
