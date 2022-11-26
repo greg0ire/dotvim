@@ -43,6 +43,9 @@ map('n', '<leader>tr', ":lua require('telescope.builtin').lsp_references()<CR>",
 -- search for word under cursor
 map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
 
+-- browse commit under cursor
+map('n', '<leader>gh', ':GBrowse <cword><CR>', silentnoremap)
+
 -- argwrap
 map('n', '<leader>q', ':ArgWrap<CR>', silentnoremap)
 
