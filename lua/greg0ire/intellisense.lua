@@ -76,10 +76,22 @@ null_ls.setup({
   sources = {
     null_ls.builtins.diagnostics.php,
     null_ls.builtins.diagnostics.phpcs.with({
-      prefer_local = 'vendor/bin'
+      only_local = 'vendor/bin',
+      condition = function(utils)
+        return utils.root_has_file('vendor/bin/phpcs')
+      end
+    }),
+    null_ls.builtins.formatting.phpcsfixer.with({
+      only_local = 'vendor/bin',
+      condition = function(utils)
+        return utils.root_has_file('vendor/bin/php-cs-fixer')
+      end
     }),
     null_ls.builtins.formatting.phpcbf.with({
-      prefer_local = 'vendor/bin'
+      only_local = 'vendor/bin',
+      condition = function(utils)
+        return utils.root_has_file('vendor/bin/phpcbf')
+      end
     }),
     null_ls.builtins.diagnostics.shellcheck,
   },
