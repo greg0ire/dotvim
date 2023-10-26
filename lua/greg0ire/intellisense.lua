@@ -48,7 +48,12 @@ local custom_lsp_attach = function(client)
     vim.api.nvim_clear_autocmds { buffer = bufnr, group = "lsp_document_highlight" }
     vim.api.nvim_create_autocmd("CursorHold", {
       pattern = "*.php",
-      callback = vim.lsp.buf.document_highlight,
+      callback = function()
+        if string.sub(vim.fn.expand('%'), 1, string.len("fugitive")) == "fugitive" then
+            return
+        end
+        vim.lsp.buf.document_highlight()
+      end,
       buffer = bufnr,
       group = "lsp_document_highlight",
       desc = "Document Highlight",
