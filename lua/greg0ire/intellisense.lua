@@ -76,6 +76,8 @@ require'lspconfig'.phpactor.setup{
   capabilities = require('cmp_nvim_lsp').default_capabilities()
 }
 
+require'lspconfig'.lemminx.setup{}
+
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
