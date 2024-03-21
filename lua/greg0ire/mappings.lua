@@ -29,7 +29,7 @@ map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>", sil
 map(
   'n',
   '<leader>l',
-  ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude_standard', '--cached', 'src'}})<cr>",
+  ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude-standard', '--cached', 'src'}})<cr>",
   silentnoremap
 )
 -- access buffers faster
