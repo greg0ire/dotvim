@@ -50,6 +50,8 @@ require('packager').setup(function(packager)
   })
   packager.add('phpactor/phpactor', { ['do'] = 'composer install' })
   packager.add('vim-vdebug/vdebug')
+  packager.add('williamboman/mason.nvim')
+  packager.add('williamboman/mason-lspconfig.nvim')
 end)
 
 vim.cmd([[
