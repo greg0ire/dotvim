@@ -54,8 +54,9 @@ require('packager').setup(function(packager)
   packager.add('williamboman/mason-lspconfig.nvim')
 end)
 
-vim.cmd([[
-if exists('g:started_by_firenvim')
+if vim.g.started_by_firenvim == true
+then
+  vim.cmd([[
   packadd firenvim
   set background=light
   set laststatus=0
@@ -63,22 +64,24 @@ if exists('g:started_by_firenvim')
     autocmd!
     au BufEnter github.com_*.txt set filetype=markdown
   augroup END
-  let g:firenvim_config = {
-    \ 'globalSettings': {
-        \ 'alt': 'all',
-    \  },
-    \ 'localSettings': {
-        \ '.*': {
-            \ 'cmdline': 'neovim',
-            \ 'priority': 0,
-            \ 'selector': 'textarea',
-            \ 'takeover': 'never',
-        \ },
-    \ }
-  \ }
+  ]])
+  vim.g.firenvim_config = {
+    globalSettings = {
+      alt = 'all',
+    },
+    localSettings = {
+      ['.*'] = {
+        cmdline = 'neovim',
+        priority = 0,
+        selector = 'textarea',
+        takeover = 'never',
+      },
+    },
+  }
 else
-  packadd airline
-  packadd airline-themes
-  let g:airline#extensions#tabline#enabled = 1
-endif
-]])
+  vim.cmd([[
+    packadd airline
+    packadd airline-themes
+    let g:airline#extensions#tabline#enabled = 1
+  ]])
+end
