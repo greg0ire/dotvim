@@ -86,7 +86,9 @@ require("mason-lspconfig").setup_handlers {
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
-    null_ls.builtins.diagnostics.php,
+    require("none-ls-php.diagnostics.php"),
+    require("none-ls-shellcheck.diagnostics"),
+    require("none-ls-shellcheck.code_actions"),
     null_ls.builtins.diagnostics.phpcs.with({
       only_local = 'vendor/bin',
       condition = function(utils)
@@ -105,6 +107,5 @@ null_ls.setup({
         return utils.root_has_file('vendor/bin/phpcbf')
       end
     }),
-    null_ls.builtins.diagnostics.shellcheck,
   },
 })

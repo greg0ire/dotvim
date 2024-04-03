@@ -1,7 +1,9 @@
 -- Load packager only when you need it
 vim.cmd [[packadd vim-packager]]
 require('packager').setup(function(packager)
-  packager.add('jose-elias-alvarez/null-ls.nvim')
+  packager.add('nvimtools/none-ls.nvim')
+  packager.add('gbprod/none-ls-php.nvim')
+  packager.add('gbprod/none-ls-shellcheck.nvim')
   packager.add('FooSoft/vim-argwrap', { name = 'argwrap' })
   packager.add('SirVer/ultisnips')
   packager.add('ishan9299/nvim-solarized-lua')
