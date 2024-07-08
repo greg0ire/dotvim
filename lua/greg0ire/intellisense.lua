@@ -114,5 +114,6 @@ null_ls.setup({
         return utils.root_has_file('vendor/bin/phpcbf')
       end
     }),
+    null_ls.builtins.diagnostics.vacuum,
   },
 })
