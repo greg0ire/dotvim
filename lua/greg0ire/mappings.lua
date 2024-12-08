@@ -1,9 +1,12 @@
 local map = vim.api.nvim_set_keymap
 local silentnoremap = {noremap = true, silent = true}
+local silentnoremapWithDesc = function(desc)
+  return {noremap = true, silent = true, desc = desc}
+end
 
 vim.g.mapleader = ';' -- remap the leader to something easier to type
 
-map('n', '<leader><space>', ':noh<CR>', silentnoremap) -- clear the highlighting
+map('n', '<leader><space>', ':noh<CR>', silentnoremapWithDesc('clear the highlighting'))
 
 -- disable n00b keys
 map('n', '<up>', '<nop>', silentnoremap)
@@ -25,36 +28,32 @@ map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
 -- Telescope
-map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>", silentnoremap)
-map('n', '<leader>fds', ":lua require('telescope.builtin').lsp_document_symbols()<cr>", silentnoremap)
-map('n', '<leader>gr', ":lua require('telescope.builtin').live_grep()<cr>", silentnoremap)
+map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>", silentnoremapWithDesc('find files'))
+map('n', '<leader>fds', ":lua require('telescope.builtin').lsp_document_symbols()<cr>", silentnoremapWithDesc('document symbols'))
+map('n', '<leader>gr', ":lua require('telescope.builtin').live_grep()<cr>", silentnoremapWithDesc('live grep'))
 map(
   'n',
   '<leader>l',
   ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude-standard', '--cached', 'src'}})<cr>",
-  silentnoremap
+  silentnoremapWithDesc('git files limited to src')
 )
 -- access buffers faster
-map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremap)
-map('n', '<leader>ta', ":lua require('telescope.builtin').lsp_workspace_symbols()<CR>", silentnoremap)
-map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremap)
-map('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>", silentnoremap)
-map('n', '<leader>fm', ":lua vim.lsp.buf.format()<CR>", silentnoremap)
-map('n', '<leader>tr', ":lua require('telescope.builtin').lsp_references()<CR>", silentnoremap)
+map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremapWithDesc('open buffers'))
+map('n', '<leader>ta', ":lua require('telescope.builtin').lsp_workspace_symbols()<CR>", silentnoremapWithDesc('workspace symbols'))
+map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremapWithDesc('commands'))
+map('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>", silentnoremapWithDesc('code actions'))
+map('n', '<leader>fm', ":lua vim.lsp.buf.format()<CR>", silentnoremapWithDesc('format'))
+map('n', '<leader>tr', ":lua require('telescope.builtin').lsp_references()<CR>", silentnoremapWithDesc('references'))
 
--- search for word under cursor
-map('n', '<leader>w', ':grep <cword><CR>', silentnoremap)
+map('n', '<leader>w', ':grep <cword><CR>', silentnoremapWithDesc('search for word under cursor'))
 
--- browse commit under cursor
-map('n', '<leader>gh', ':GBrowse <cword><CR>', silentnoremap)
+map('n', '<leader>gh', ':GBrowse <cword><CR>', silentnoremapWithDesc('browse commit under cursor'))
 
--- argwrap
-map('n', '<leader>q', ':ArgWrap<CR>', silentnoremap)
+map('n', '<leader>q', ':ArgWrap<CR>', silentnoremapWithDesc('toggle multiline arguments'))
 
--- gets the git history of the visual selection
 map(
   'v',
   '<leader>l',
   ":<c-u>exe ':term git log -L' line(\"'<\").','.line(\"'>\").':'.expand('%')<CR>",
-  silentnoremap
+  silentnoremapWithDesc('git log of visual selection')
 )
