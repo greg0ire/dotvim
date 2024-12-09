@@ -17,6 +17,7 @@ require('packager').setup(function(packager)
   packager.add('rcarriga/nvim-dap-ui')
   packager.add('theHamsta/nvim-dap-virtual-text')
   packager.add('github/copilot.vim')
+  packager.add('CopilotC-Nvim/CopilotChat.nvim')
   packager.add('hashivim/vim-terraform')
   packager.add('IndianBoy42/tree-sitter-just')
   packager.add('Glench/Vim-Jinja2-Syntax')
@@ -67,6 +68,7 @@ require('packager').setup(function(packager)
 end)
 
 require('tree-sitter-just').setup({})
+require('CopilotChat').setup({})
 
 if vim.g.started_by_firenvim == true
 then
