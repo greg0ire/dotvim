@@ -64,6 +64,7 @@ require('packager').setup(function(packager)
   packager.add('vim-vdebug/vdebug')
   packager.add('williamboman/mason.nvim')
   packager.add('williamboman/mason-lspconfig.nvim')
+  packager.add('stevearc/conform.nvim')
 end)
 
 require('tree-sitter-just').setup({})

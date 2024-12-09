@@ -83,6 +83,22 @@ require("mason-lspconfig").setup()
 
 require("mason-lspconfig").setup_handlers {
     function (server_name) -- default handler (optional)
+      if server_name == "kotlin_language_server" then
+        require("lspconfig")["kotlin_language_server"].setup {
+          on_attach=custom_lsp_attach,
+          capabilities = require('cmp_nvim_lsp').default_capabilities(),
+          settings = {
+            kotlin = {
+              compiler = {
+                jvm = {
+                  target = "17"
+                }
+              }
+            }
+          }
+        }
+        return
+      end
       require("lspconfig")[server_name].setup {
         on_attach=custom_lsp_attach,
         capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -96,6 +112,7 @@ null_ls.setup({
     require("none-ls-php.diagnostics.php"),
     require("none-ls-shellcheck.diagnostics"),
     require("none-ls-shellcheck.code_actions"),
+    null_ls.builtins.diagnostics.ktlint,
     null_ls.builtins.diagnostics.phpcs.with({
       only_local = 'vendor/bin',
       condition = function(utils)
@@ -115,5 +132,12 @@ null_ls.setup({
       end
     }),
     null_ls.builtins.diagnostics.vacuum,
+  },
+})
+
+-- for some reason, none-ls indents Kotlin files badly with my setup
+require('conform').setup({
+  formatters_by_ft = {
+    kotlin = { 'ktlint' },
   },
 })
