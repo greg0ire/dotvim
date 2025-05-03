@@ -37,6 +37,8 @@ require('packager').setup(function(packager)
   packager.add('hrsh7th/cmp-nvim-lsp')
   packager.add('quangnguyen30192/cmp-nvim-ultisnips')
   packager.add('mcauley-penney/tidy.nvim')
+  packager.add('nvim-lualine/lualine.nvim')
+  packager.add('nvim-tree/nvim-web-devicons')
   packager.add('nvim-treesitter/nvim-treesitter', {
     name = 'treesitter',
     ['do'] = ':TSUpdate'
@@ -52,8 +54,6 @@ require('packager').setup(function(packager)
   packager.add('tpope/vim-sleuth', { name = 'sleuth' })
   packager.add('tpope/vim-surround', { name = 'surround' })
   packager.add('tpope/vim-unimpaired', { name = 'unimpaired' })
-  packager.add('vim-airline/vim-airline', { name = 'airline', type = 'opt' })
-  packager.add('vim-airline/vim-airline-themes', { name = 'airline-themes', type = 'opt' })
   packager.add('github/copilot.vim')
   packager.add('glacambre/firenvim', {
     name = 'firenvim',
@@ -95,9 +95,5 @@ then
     },
   }
 else
-  vim.cmd([[
-    packadd airline
-    packadd airline-themes
-    let g:airline#extensions#tabline#enabled = 1
-  ]])
+  require('lualine').setup()
 end
