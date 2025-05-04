@@ -4,8 +4,6 @@ local silentnoremapWithDesc = function(desc)
   return {noremap = true, silent = true, desc = desc}
 end
 
-vim.g.mapleader = ';' -- remap the leader to something easier to type
-
 map('n', '<leader><space>', ':noh<CR>', silentnoremapWithDesc('clear the highlighting'))
 
 -- disable n00b keys
