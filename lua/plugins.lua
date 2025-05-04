@@ -4,18 +4,32 @@ return {
   "andymass/vim-matchup",
   "chr4/nginx.vim",
   "fpob/nette.vim",
-  "gbprod/none-ls-php.nvim",
-  "gbprod/none-ls-shellcheck.nvim",
+  {
+    "gbprod/none-ls-php.nvim",
+    ft = "php",
+  },
+  {
+    "gbprod/none-ls-shellcheck.nvim",
+    ft = "sh",
+  },
   "github/copilot.vim",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/nvim-cmp",
+  {
+    "hrsh7th/nvim-cmp",
+    event = "InsertEnter",
+    dependencies = {
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+    }
+  },
   "ishan9299/nvim-solarized-lua",
   "janko-m/vim-test",
   "jiangmiao/auto-pairs",
   "junegunn/vader.vim",
   "lewis6991/gitsigns.nvim",
+  {
   "lumiliet/vim-twig",
+  ft = "twig",
+  },
   "mcauley-penney/tidy.nvim",
   "michaeljsmith/vim-indent-object",
   "neovim/nvim-lspconfig",
@@ -23,7 +37,10 @@ return {
   "nvim-lualine/lualine.nvim",
   "nvim-telescope/telescope-ui-select.nvim",
   "nvim-telescope/telescope.nvim",
-  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-tree/nvim-web-devicons",
+    lazy = true,
+  },
   "nvimtools/none-ls.nvim",
   "quangnguyen30192/cmp-nvim-ultisnips",
   {
@@ -35,6 +52,7 @@ return {
   "pbrisbin/vim-mkdir",
   {
     "phpactor/phpactor",
+    ft = "php",
     build = "composer install"
   },
   "preservim/nerdtree",
