@@ -41,10 +41,6 @@ local custom_lsp_attach = function(client)
   buf_set_keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   -- show diagnostics on current line in a float
   buf_set_keymap('n', '<leader>di', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-  -- navigate to previous diagnostic
-  buf_set_keymap('n', '<leader>dp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-  -- next diagnostic
-  buf_set_keymap('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 
   -- Use LSP as the handler for omnifunc.
   --    See `:help omnifunc` and `:help ins-completion` for more information.
