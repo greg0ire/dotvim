@@ -60,10 +60,35 @@ return {
   "quangnguyen30192/cmp-nvim-ultisnips",
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     run = ":TSUpdate"
   },
-  "nvim-treesitter/nvim-treesitter-context",
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    version = "^1.0.0",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    branch = "main",
+  },
+  {
+    'MeanderingProgrammer/treesitter-modules.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    opts = {
+      ensure_installed = languages,
+      highlight = { enable = true },
+      indent = { enable = true },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<A-o>",
+          node_incremental = "<A-o>",
+          scope_incremental = "<A-O>",
+          node_decremental = "<A-i>",
+        },
+      },
+    },
+  },
   "pbrisbin/vim-mkdir",
   {
     "phpactor/phpactor",
