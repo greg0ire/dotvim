@@ -1,31 +1,14 @@
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = {
-      "php" -- needed for the cursor to be properly indented on new lines
-    },
-  },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "gnn",
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
-    },
-  },
-  textobjects = {
-    select = {
-      enable = true,
-
-      keymaps = {
-        ["am"] = "@function.outer",
-        ["im"] = "@function.inner",
-        ["aa"] = "@parameter.outer",
-        ["ia"] = "@parameter.inner",
-      },
-    },
-  },
-}
+vim.keymap.set({ "x", "o" }, "am", function()
+  require "nvim-treesitter-textobjects.select".select_textobject("@function.outer", "textobjects")
+end)
+vim.keymap.set({ "x", "o" }, "im", function()
+  require "nvim-treesitter-textobjects.select".select_textobject("@function.inner", "textobjects")
+end)
+vim.keymap.set({ "x", "o" }, "aa", function()
+  require "nvim-treesitter-textobjects.select".select_textobject("@parameter.outer", "textobjects")
+end)
+vim.keymap.set({ "x", "o" }, "ia", function()
+  require "nvim-treesitter-textobjects.select".select_textobject("@parameter.inner", "textobjects")
+end)
 
 require'treesitter-context'.setup {}
