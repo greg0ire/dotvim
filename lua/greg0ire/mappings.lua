@@ -26,7 +26,6 @@ map('n', '<C-k>', '<C-w>k', silentnoremap)
 map('n', '<C-l>', '<C-w>l', silentnoremap)
 
 -- Telescope
-map('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<cr>", silentnoremapWithDesc('find files'))
 map('n', '<leader>fds', ":lua require('telescope.builtin').lsp_document_symbols()<cr>", silentnoremapWithDesc('document symbols'))
 map('n', '<leader>gr', ":lua require('telescope.builtin').live_grep()<cr>", silentnoremapWithDesc('live grep'))
 map(
