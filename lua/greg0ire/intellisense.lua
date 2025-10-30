@@ -42,6 +42,9 @@ local custom_lsp_attach = function(client)
   -- show diagnostics on current line in a float
   buf_set_keymap('n', '<leader>di', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 
+  buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+
+
   -- Use LSP as the handler for omnifunc.
   --    See `:help omnifunc` and `:help ins-completion` for more information.
   vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
