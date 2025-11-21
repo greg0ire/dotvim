@@ -74,8 +74,8 @@ return {
     build = ":call firenvim#install(0)"
   },
   "vim-vdebug/vdebug",
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim"
+  "mason-org/mason.nvim",
+  "mason-org/mason-lspconfig.nvim",
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
