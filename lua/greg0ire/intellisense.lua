@@ -32,7 +32,8 @@ cmp.setup {
   }
 }
 
-local custom_lsp_attach = function(client)
+local custom_lsp_attach = function(ev)
+  local client = vim.lsp.get_client_by_id(ev.data.client_id)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(0, ...) end
   local opts = { noremap=true, silent=true }
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
