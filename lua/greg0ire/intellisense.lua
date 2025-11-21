@@ -78,17 +78,12 @@ local custom_lsp_attach = function(ev)
   -- require('completion').on_attach()
 end
 
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = custom_lsp_attach,
+})
+
 require("mason").setup()
 require("mason-lspconfig").setup()
-
-require("mason-lspconfig").setup_handlers {
-    function (server_name) -- default handler (optional)
-      require("lspconfig")[server_name].setup {
-        on_attach=custom_lsp_attach,
-        capabilities = require('cmp_nvim_lsp').default_capabilities()
-      }
-    end,
-}
 
 local null_ls = require("null-ls")
 null_ls.setup({
