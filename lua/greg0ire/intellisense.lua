@@ -32,7 +32,8 @@ cmp.setup {
   }
 }
 
-local custom_lsp_attach = function(client)
+local custom_lsp_attach = function(ev)
+  local client = vim.lsp.get_client_by_id(ev.data.client_id)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(0, ...) end
   local opts = { noremap=true, silent=true }
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
@@ -77,34 +78,38 @@ local custom_lsp_attach = function(client)
   -- require('completion').on_attach()
 end
 
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = custom_lsp_attach,
+})
+
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-require("mason-lspconfig").setup_handlers {
-    function (server_name) -- default handler (optional)
-      if server_name == "kotlin_language_server" then
-        require("lspconfig")["kotlin_language_server"].setup {
-          on_attach=custom_lsp_attach,
-          capabilities = require('cmp_nvim_lsp').default_capabilities(),
-          settings = {
-            kotlin = {
-              compiler = {
-                jvm = {
-                  target = "17"
-                }
-              }
-            }
-          }
-        }
-        return
-      end
-      require("lspconfig")[server_name].setup {
-        on_attach=custom_lsp_attach,
-        capabilities = require('cmp_nvim_lsp').default_capabilities()
-      }
-    end,
-}
-
+-- require("mason-lspconfig").setup_handlers {
+--     function (server_name) -- default handler (optional)
+--       if server_name == "kotlin_language_server" then
+--         require("lspconfig")["kotlin_language_server"].setup {
+--           on_attach=custom_lsp_attach,
+--           capabilities = require('cmp_nvim_lsp').default_capabilities(),
+--           settings = {
+--             kotlin = {
+--               compiler = {
+--                 jvm = {
+--                   target = "17"
+--                 }
+--               }
+--             }
+--           }
+--         }
+--         return
+--       end
+--       require("lspconfig")[server_name].setup {
+--         on_attach=custom_lsp_attach,
+--         capabilities = require('cmp_nvim_lsp').default_capabilities()
+--       }
+--     end,
+-- }
+--
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
