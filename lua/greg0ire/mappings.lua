@@ -45,6 +45,7 @@ map('n', '<leader>b', require('telescope.builtin').buffers, silentWithDesc('open
 map('n', '<leader>ta', require('telescope.builtin').lsp_workspace_symbols, silentWithDesc('workspace symbols'))
 map('n', '<leader>co', require('telescope.builtin').commands, silentWithDesc('commands'))
 map('n', '<leader>ca', vim.lsp.buf.code_action, silentWithDesc('code actions'))
+map('v', '<leader>ca', vim.lsp.buf.code_action, silentWithDesc('code actions for visual selection'))
 map('n', '<leader>fm', vim.lsp.buf.format, silentWithDesc('format'))
 map('n', '<leader>tr', require('telescope.builtin').lsp_references, silentWithDesc('references'))
 
