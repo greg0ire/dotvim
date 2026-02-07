@@ -1,52 +1,58 @@
-local map = vim.api.nvim_set_keymap
-local silentnoremap = {noremap = true, silent = true}
+local map = vim.keymap.set
 local silentnoremapWithDesc = function(desc)
   return {noremap = true, silent = true, desc = desc}
 end
+local silentWithDesc = function(desc)
+  return {silent = true, desc = desc}
+end
+local silent = {silent = true}
 
-map('n', '<leader><space>', ':noh<CR>', silentnoremapWithDesc('clear the highlighting'))
+map('n', '<leader><space>', ':noh<CR>', silentWithDesc('clear the highlighting'))
 
 -- disable n00b keys
-map('n', '<up>', '<nop>', silentnoremap)
-map('n', '<down>', '<nop>', silentnoremap)
-map('n', '<left>', '<nop>', silentnoremap)
-map('n', '<right>', '<nop>', silentnoremap)
-map('i', '<up>', '<nop>', silentnoremap)
-map('i', '<down>', '<nop>', silentnoremap)
-map('i', '<left>', '<nop>', silentnoremap)
-map('i', '<right>', '<nop>', silentnoremap)
+map('n', '<up>', '<nop>', silent)
+map('n', '<down>', '<nop>', silent)
+map('n', '<left>', '<nop>', silent)
+map('n', '<right>', '<nop>', silent)
+map('i', '<up>', '<nop>', silent)
+map('i', '<down>', '<nop>', silent)
+map('i', '<left>', '<nop>', silent)
+map('i', '<right>', '<nop>', silent)
 
 -- http://stackoverflow.com/questions/80677/what-is-the-difference-between-c-c-and-c-in-vim
-map('i', '<C-c>', '<Esc><Esc>', silentnoremap)
+map('i', '<C-c>', '<Esc><Esc>', silent)
 
 -- Make moving around windows faster
-map('n', '<C-h>', '<C-w>h', silentnoremap)
-map('n', '<C-j>', '<C-w>j', silentnoremap)
-map('n', '<C-k>', '<C-w>k', silentnoremap)
-map('n', '<C-l>', '<C-w>l', silentnoremap)
+map('n', '<C-h>', '<C-w>h', silent)
+map('n', '<C-j>', '<C-w>j', silent)
+map('n', '<C-k>', '<C-w>k', silent)
+map('n', '<C-l>', '<C-w>l', silent)
 
 -- Telescope
-map('n', '<leader>fds', ":lua require('telescope.builtin').lsp_document_symbols()<cr>", silentnoremapWithDesc('document symbols'))
-map('n', '<leader>gr', ":lua require('telescope.builtin').live_grep()<cr>", silentnoremapWithDesc('live grep'))
+map('n', '<leader>fds', require('telescope.builtin').lsp_document_symbols, silentWithDesc('document symbols'))
+map('n', '<leader>gr', require('telescope.builtin').live_grep, silentWithDesc('live grep'))
 map(
   'n',
   '<leader>l',
-  ":lua require('telescope.builtin').git_files({ git_command = {'git', 'ls-files', '--exclude-standard', '--cached', 'src'}})<cr>",
-  silentnoremapWithDesc('git files limited to src')
+  function()
+    require('telescope.builtin').git_files({ git_command = { 'git', 'ls-files', '--exclude-standard', '--cached', 'src' } })
+  end,
+  silentWithDesc('git files limited to src')
 )
+
 -- access buffers faster
-map('n', '<leader>b', ":lua require('telescope.builtin').buffers()<CR>", silentnoremapWithDesc('open buffers'))
-map('n', '<leader>ta', ":lua require('telescope.builtin').lsp_workspace_symbols()<CR>", silentnoremapWithDesc('workspace symbols'))
-map('n', '<leader>co', ":lua require('telescope.builtin').commands()<CR>", silentnoremapWithDesc('commands'))
-map('n', '<leader>ca', ":lua vim.lsp.buf.code_action()<CR>", silentnoremapWithDesc('code actions'))
-map('n', '<leader>fm', ":lua vim.lsp.buf.format()<CR>", silentnoremapWithDesc('format'))
-map('n', '<leader>tr', ":lua require('telescope.builtin').lsp_references()<CR>", silentnoremapWithDesc('references'))
+map('n', '<leader>b', require('telescope.builtin').buffers, silentWithDesc('open buffers'))
+map('n', '<leader>ta', require('telescope.builtin').lsp_workspace_symbols, silentWithDesc('workspace symbols'))
+map('n', '<leader>co', require('telescope.builtin').commands, silentWithDesc('commands'))
+map('n', '<leader>ca', vim.lsp.buf.code_action, silentWithDesc('code actions'))
+map('n', '<leader>fm', vim.lsp.buf.format, silentWithDesc('format'))
+map('n', '<leader>tr', require('telescope.builtin').lsp_references, silentWithDesc('references'))
 
-map('n', '<leader>w', ':grep <cword><CR>', silentnoremapWithDesc('search for word under cursor'))
+map('n', '<leader>w', ':grep <cword><CR>', silentWithDesc('search for word under cursor'))
 
-map('n', '<leader>gh', ':GBrowse <cword><CR>', silentnoremapWithDesc('browse commit under cursor'))
+map('n', '<leader>gh', ':GBrowse <cword><CR>', silentWithDesc('browse commit under cursor'))
 
-map('n', '<leader>q', ':ArgWrap<CR>', silentnoremapWithDesc('toggle multiline arguments'))
+map('n', '<leader>q', ':ArgWrap<CR>', silentWithDesc('toggle multiline arguments'))
 
 map(
   'v',
