@@ -30,7 +30,6 @@ map('n', '<C-l>', '<C-w>l', silent)
 
 -- Telescope
 map('n', '<leader>fds', require('telescope.builtin').lsp_document_symbols, silentWithDesc('document symbols'))
-map('n', '<leader>gr', require('telescope.builtin').live_grep, silentWithDesc('live grep'))
 map(
   'n',
   '<leader>l',
