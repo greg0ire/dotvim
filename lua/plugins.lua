@@ -62,6 +62,14 @@ return {
     build = "composer install"
   },
   "preservim/nerdtree",
+  "stevearc/conform.nvim",
+  {
+    "shumphrey/fugitive-gitlab.vim",
+    config = function()
+      vim.g.fugitive_gitlab_domains = { "git.manomano.tech" }
+    end
+
+  },
   "tpope/vim-eunuch",
   "tpope/vim-fugitive",
   "tpope/vim-repeat",
